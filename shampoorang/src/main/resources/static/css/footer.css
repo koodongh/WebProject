@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.nav-bar {
+	/* #1e5038 */
+	background-color: #5eaa86;
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.nav-bar a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.nav-bar a:hover {
+	color: #305d50;
+}
