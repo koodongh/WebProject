@@ -4,10 +4,9 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Hello Page</title>
+		<title>index</title>
 	</head>
 	<body>
-		<h1>This is hello.jsp page</h1>
-		<h2>${ message }</h2>
+		<h1>여기는 index</h1>
 	</body>
 </html>
