@@ -12,7 +12,7 @@
     <meta name="author" content="">
     
     <!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="css/home.css"> 
+	<link rel="stylesheet" href="css/home/basic.css"> 
     <title>index</title>
 
   </head>
@@ -28,7 +28,7 @@
 	<article  id="index"> 
             		<div id="resultBox">
             			<div class='result'>
-            				<div><a href="#"><img src="<c:url value='image/shampoo.jpg'/>"></a></div><br><br>
+            				<div><a href="#"><img src="<c:url value='/image/shampoo.jpg'/>"></a></div><br><br>
             				
             			<h1>전 성분</h1><br>
             				<h5>가나다라 마바사아</h5>
