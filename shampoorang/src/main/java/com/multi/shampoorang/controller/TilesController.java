@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class TilesController {	
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String home() {
-        return "index";
+        return "home/home";
     }
     
-    @RequestMapping(value = "/index", method = RequestMethod.GET)
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String index() {
-        return "index";
+        return "home/home";
     }
 }

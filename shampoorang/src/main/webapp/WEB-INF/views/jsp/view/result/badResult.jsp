@@ -23,19 +23,22 @@
 
 	<div class="card align-middle" style="width:30rem; margin-top:50px; height: 60rem; border-radius:20px;">
 		<div class="card-title" >
-			<h2 class="card-title text-center" style="color:#000000; font-size: 30px; margin-top: 100px; margin-bottom: 100px;">좋은 성분<br>자세히 보기</h2>
+			<h2 class="card-title text-center" style="color:#000000; font-size: 30px; margin-top: 100px; margin-bottom: 100px;">나쁜 성분<br>자세히 보기</h2>
 		</div>	
 		
 <div class="card-body">		
+	<div id="resultBox">
 		
-        <h1>성분 1</h1>   
-        <h5>EWG 등급 : 8등급<br>성분 설명 어디에 좋은지<br>가나다라 마바사 아자차<br>카타파하</h5><br><br>
+        <h1>성분 1</h1> 
+        <h5>EWG 등급 : 8등급<br>성분 설명 어디에 나쁜지<br>가나다라 마바사 아자차<br>카타파하</h5><br><br>
+
 
         <h1>성분 2</h1>      
-        <h5>EWG 등급 : 8등급<br>성분 설명 어디에 좋은지<br>가나다라 마바사 아자차<br>카타파하</h5><br><br>
+        <h5>EWG 등급 : 8등급<br>성분 설명 어디에 나쁜지<br>가나다라 마바사 아자차<br>카타파하</h5><br><br>
 
             		
-	</div>
-	</div>     
+	</div> 
+	</div> 
+	</div>   
   </body>
 </html>
