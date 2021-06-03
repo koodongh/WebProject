@@ -12,7 +12,7 @@
     <meta name="author" content="">
     
     <!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="css/home.css"> 
+	<link rel="stylesheet" href="/css/home.css"> 
 	
     <title>badResult</title>
 
