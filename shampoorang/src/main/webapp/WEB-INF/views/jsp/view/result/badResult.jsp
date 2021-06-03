@@ -2,8 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<html>
-	 <head>
+<html lang="ko">
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,33 +12,49 @@
     <meta name="author" content="">
     
     <!-- Bootstrap CSS -->
-  	<link rel="stylesheet" href="/css/home/basic.css">
-	
+<link rel="stylesheet" href="/css/home/basic.css">
+		
     <title>badResult</title>
+    <style>
 
+      h2{
+        font-size:40px;
+      }
+
+      h3{
+        font-size:30px;  
+      }
+
+      h4{
+        font-size:10px;  
+      }
+
+    </style>
   </head>
-  
-  
- <body cellpadding="0" cellspacing="0" marginleft="0" margintop="0" width="100%" height="100%" align="center">
 
-	<div class="card align-middle" style="width:30rem; margin-top:50px; height: 60rem; border-radius:20px;">
+  <body>
+<div class="container">
+	<div class="card align-middle" style="width:30rem; margin-top:100px; height: 50rem; border-radius:20px;">
 		<div class="card-title" >
-			<h2 class="card-title text-center" style="color:#000000; font-size: 30px; margin-top: 100px; margin-bottom: 100px;">나쁜 성분<br>자세히 보기</h2>
-		</div>	
-		
-<div class="card-body">		
-	<div id="resultBox">
-		
-        <h1>성분 1</h1> 
-        <h5>EWG 등급 : 8등급<br>성분 설명 어디에 나쁜지<br>가나다라 마바사 아자차<br>카타파하</h5><br><br>
+			<h2 class="card-title text-center" style="color:#000000; font-size: 50px; margin-top: 100px;">나쁜 성분<br>자세히 보기</h2>
+		</div>
 
+    <div class="first ingredient">
+      <h3 class="text-center">성분 1</h3>
+    </div>
+    <div class="firt explain">
+      <h4 class="text-center">가나다라 마바사아</h4>
+      <h4 class="text-center">가나다라 마바사아</h4>
+    </div>
 
-        <h1>성분 2</h1>      
-        <h5>EWG 등급 : 8등급<br>성분 설명 어디에 나쁜지<br>가나다라 마바사 아자차<br>카타파하</h5><br><br>
-
-            		
-	</div> 
-	</div> 
-	</div>   
-  </body>
+    <div class="second ingredient" style="margin-top: 20px;" >
+			<h3 class="text-center">성분 2</h3>
+    </div>
+    <div class="second explain">
+      <h4 class="text-center">가나다라 마바사아</h4>
+      <h4 class="text-center">가나다라 마바사아</h4>
+     </div>
+	</div>
+  </div>
+</body>
 </html>
