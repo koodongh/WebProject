@@ -11,8 +11,9 @@ public class TilesController {
         return "home/home";
     }
     
-    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    // DB 테스트용 화면    
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String index() {
-        return "home/home";
+        return "index";
     }
 }

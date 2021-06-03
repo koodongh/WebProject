@@ -10,8 +10,7 @@
     <meta name="author" content="">
     
     <!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="css/home/basic.css"> 
-	
+  	<link rel="stylesheet" href="/css/home/basic.css">
     <title>로그인:::Shampoorang</title>
 
   </head>

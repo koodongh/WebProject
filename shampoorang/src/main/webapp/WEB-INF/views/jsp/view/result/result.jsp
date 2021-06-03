@@ -12,7 +12,7 @@
     <meta name="author" content="">
     
     <!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="css/home/basic.css"> 
+  	<link rel="stylesheet" href="/css/home/basic.css"> 
     <title>index</title>
 
   </head>
