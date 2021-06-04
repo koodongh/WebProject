@@ -11,32 +11,35 @@
     <meta name="author" content="">
     
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/home/common.css">
     <title>회원가입:::Shampoorang</title>
 
   </head>
 
-  <body cellpadding="0" cellspacing="0" marginleft="0" margintop="0" width="100%" height="100%" align="center">
+  <body>
 
-	<div class="card align-middle" style="width:30rem; margin-top:100px; height: 50rem; border-radius:20px;">
+	<div class="container">
 		<div class="card-title" >
-			<h2 class="card-title text-center" align = "left" style="color:#000000; font-size: 50px; margin-top: 100px;">Register</h2>
+			<h2>Register</h2>
 		</div>
 		<div class="card-body">
-      <form class="form-signin" method="POST" onSubmit="logincall();return false">
+     		 <form class="form-signin" method="POST" onSubmit="logincall();return false">
 <!--         <h5 class="form-signin-heading" style="font-size: 15px;">로그인 정보를 입력하세요</h5> -->        
-		<label for="inputEmail" class="sr-only" >ID</label>
-        <input type="text" id="uid" class="form-control" placeholder="ID" required autofocus><BR>
-        <label for="inputPassword" class="sr-only" >Password</label>
-        <input type="password" id="upw" class="form-control" placeholder="Password" required><br>
-       	<label for="inputName" class="sr-only" >NAME</label>
-        <input type="text" id="uname" class="form-control" placeholder="Name" required autofocus><BR>
+				<label for="inputEmail" class="sr-only" >ID</label>
+       		 <input type="text" id="uid" class="form-control" placeholder="ID" required autofocus><BR>
+        		<label for="inputPassword" class="sr-only" >Password</label>
+       		 <input type="password" id="upw" class="form-control" placeholder="Password" required><br>
+       			<label for="inputName" class="sr-only" >NAME</label>
+       		 <input type="text" id="uname" class="form-control" placeholder="Name" required autofocus><BR>
 <!--         <div class="checkbox">
            <label>
             <input type="checkbox" value="remember-me" style = "margin-top: 50px;"> 기억하기
           </label>
         </div> -->
-        <button id="btn-Yes" class="btn btn-lg btn-primary btn-block" type="submit" style="width:25rem; height: 3rem; border-radius:10px;margin-top : 20px; color : #ffffff; background:#000000">>NEXT</button>
-      </form>
+        	<div class="button-location">
+       			<button id="btn-Yes" class="btn btn-lg btn-primary btn-block" type="submit">>NEXT</button>
+     		</div>
+     		</form>
       
 		</div>
 	</div>

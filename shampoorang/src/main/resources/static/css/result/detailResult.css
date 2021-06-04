@@ -14,19 +14,19 @@
 
 .first-ingredient h3 {
 	font-size: 30px;
-	margin-top: 40px;
+	margin-top: 50px;
 }
 
 .first-explain h4 {
-	font-size: 10px;
+	font-size: 20px;
 	margin-top: 10px;
 }
-.second-ingredient{
+.second-ingredient h3{
 	font-size: 30px;
 	margin-top: 50px;
 }
 
 .second-explain h4{
-	font-size: 10px;
+	font-size: 20px;
 	margin-top: 10px;
 }
