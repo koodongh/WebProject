@@ -8,7 +8,7 @@ public class ResultController {
 	
 	@RequestMapping("result/result")
 	public String allResult() {
-		return "result/result";
+		return "result/allResult";
 	}
 	
 	@RequestMapping("result/badResult")
