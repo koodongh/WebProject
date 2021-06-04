@@ -7,6 +7,7 @@
 		<title>index</title>
 	</head>
 	<body>
-		<h1>여기는 index</h1>
+		<h1>DBtest(2021.06.03)</h1>
+		<a href="ingd/ingdListView">샴푸 성분 리스트</a><br><br>
 	</body>
 </html>

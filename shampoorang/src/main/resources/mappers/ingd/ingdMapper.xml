@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.multi.shampoorang.dao.IProductDAO">
+  		<resultMap id="ingdResult" type="com.multi.shampoorang.model.ProductVO">
+			<result property="ingd_name" column="ingd_name" />
+	        <result property="ewg" column="ewg" />
+	        <result property="hazzard" column="hazzard" />
+	        <result property="description" column="description" />
+	        <result property="ewg_encode" column="ewg_encode" />
+		</resultMap>
+		
+  		<!--  전체 상품 조회 -->
+	  	<select id="ingdList" resultMap="ingdResult">	  	  	
+			SELECT * FROM ingd_list ORDER BY ingd_name					
+		</select>
+	</mapper>
+		
