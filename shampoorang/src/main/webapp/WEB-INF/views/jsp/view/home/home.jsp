@@ -12,8 +12,6 @@
     <meta name="author" content="">
     
     <!-- Bootstrap CSS -->
-	  <link rel="stylesheet" href="/css/home/basic.css"> 
-	
     <title>Shampoorang</title>
 
   </head>
@@ -27,7 +25,7 @@
 
 		<div class="card-body">
       <form class="form-signin" method="POST" onSubmit="logincall();return false">
-        <button id="btn-Con" onclick = "location.href = 'result/result'" class="btn btn-lg btn-primary btn-block" type="button" style="width:25rem; height: 3rem; border-radius:10px;margin-top : 20px; color : #ffffff; background:#000000">그냥 쓸께요</button>
+        <button id="btn-Con" onclick = "location.href = 'result/imgSelect'" class="btn btn-lg btn-primary btn-block" type="button" style="width:25rem; height: 3rem; border-radius:10px;margin-top : 20px; color : #ffffff; background:#000000">그냥 쓸께요</button>
         <button id="btn-Log" onclick = "location.href = 'home/login'" class="btn btn-lg btn-primary btn-block" type="button" style="width:25rem; height: 3rem; border-radius:10px;margin-top : 20px; color : #ffffff; background:#000000">로그인</button>
         <!-- a 태그사용 -->
         <button id="btn-Reg" onclick = "location.href = 'home/register'" class="btn btn-lg btn-primary btn-block" type="button" style="width:25rem; height: 3rem; border-radius:10px;margin-top : 20px; color : #ffffff; background:#000000">아직 회원이 아니신가요?</button>

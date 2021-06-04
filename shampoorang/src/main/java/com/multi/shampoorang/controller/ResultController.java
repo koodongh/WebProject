@@ -21,4 +21,9 @@ public class ResultController {
 		return "result/goodResult";
 	}
 	
+	@RequestMapping(value="result/imgSelect")
+	public String imgSelect() {
+		return "result/imgSelect";
+	}
+	
 }
