@@ -1,22 +1,36 @@
- body {
-	margin-left:0;
-	margin-top:0;
-	width:100%;
-	height:100%;
-	text-align:center;
+@charset "UTF-8";
+
+.shampoorang {
+	margin-top: 12rem;
+	margin-bottom: 4rem;
 }
 
-.card-title h2{
-	color:#000000;
-	font-size: 60px;
-	margin-top: 100px;
+.shampoorang h2 {
+	text-align: center;
+	font-size: 50px;
+	font-family: 'Raleway', sans-serif;
 }
 
-.card-body button {
-	width:25rem;
-	height: 3rem;
-	border-radius:10px;
-	margin-top : 20px;
-	color : #ffffff;
-	background: black;
+.home-buttons-list {
+	flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.home-buttons-list button {
+	margin-bottom: 20px;
+    height: 3rem;
+    border-radius: 10px;
+}
+
+.home-buttons-list .login {
+	background-color: #3bc3ea;
+}
+
+.home-buttons-list .signin {
+	background-color: #91d6ea;
+}
+
+.home-buttons-list .guest {
+	background-color: #d1e8ef;
 }
