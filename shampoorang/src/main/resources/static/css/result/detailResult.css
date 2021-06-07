@@ -1,8 +1,8 @@
+.container {
+	margin-top: 12rem;
+	margin-bottom: 15rem;
+}
 .card-align-middle {
-	width: 30rem;
-	margin-top: 100px;
-	height: 50rem;
-	border-radius: 20px;
 	text-align:center
 }
 

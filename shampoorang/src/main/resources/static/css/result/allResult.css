@@ -1,24 +1,24 @@
 .container {
-	text-align:center;
+	margin-top: 12rem;
+	margin-bottom: 15rem;
 }
 .card-align-middle {
-	width: 30rem;
-	margin-top: 100px;
-	height: 80rem;
-	border-radius: 20px;
 	text-align:center;
 }
 
 .card-title h2 {
 	color: #000000;
 	font-size: 50px;
-	margin-top: 100px;
 }
 
 .shampoo-image img{
+	margin-top: 30px;
+	margin-bottom: 20px;
 	width: 200px;
 	height: 200px;
+
 }
+
 
 .all-ingredient h3 {
 	font-size: 30px;
@@ -27,7 +27,6 @@
 
 .all-ingredient h4 {
 	font-size: 20px;
-	text-align:center;
 }
 
 
