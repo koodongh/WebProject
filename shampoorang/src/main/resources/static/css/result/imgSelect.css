@@ -1,21 +1,33 @@
 @charset "UTF-8";
 
-.title {
-	margin-top: 100px;
-	text-align:center;
+.container {
+	margin-top: 12rem;
+	margin-bottom: 4rem;
+	
 }
 
 .title h3 {
 	font-size: 50px;
+	text-align:center;
 }
 
 .link {
-	margin-top: 200px;
 	width: 50vw;
 	display: flex;
-	justify-content: space-around;
+    justify-content: center;
+    margin: 0 auto;
+
 }
 
 .link a {
 	color: black;
+}
+
+.camera {
+	margin-top: 10rem;
+	margin-left:30vw;	
+}
+
+.upload {
+	margin-top:10rem;	
 }
