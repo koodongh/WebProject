@@ -9,4 +9,19 @@ public class MypageController {
 	public String mypage() {
 		return "mypage/main";
 	}
+	
+	@RequestMapping("mypage/like")
+	public String mypageLike() {
+		return "mypage/likeIngd";
+	}
+	
+	@RequestMapping("mypage/dislike")
+	public String mypageDislike() {
+		return "mypage/dislikeIngd";
+	}
+	
+	@RequestMapping("mypage/resultList")
+	public String mypageResultList() {
+		return "mypage/resultList";
+	}
 }
