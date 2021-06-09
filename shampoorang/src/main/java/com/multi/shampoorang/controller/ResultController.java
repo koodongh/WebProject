@@ -26,4 +26,9 @@ public class ResultController {
 		return "result/imgSelect";
 	}
 	
+	@RequestMapping(value="result/ocrResult")
+	public String ocrResult() {
+		return "result/ocrResult";
+	}
+	
 }
