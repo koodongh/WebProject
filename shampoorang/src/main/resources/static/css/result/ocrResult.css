@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.container {
+	margin-top: 5rem;
+	margin-bottom: 15rem;
+	text-align:center;
+}
+
+.container h2 {
+	font-size: 50px;
+}
+
+
+.container h3 {
+	font-size: 20px;
+	margin-top: 5rem;
+}
+
+.container h4 {
+	font-size: 16px;
+	color:red;
+}
+
+
+.file {
+	margin-top:10px;
+	font-size: 15px;
+	
+}
+
+.result {
+	margin-top: 5rem;
+
+
+}

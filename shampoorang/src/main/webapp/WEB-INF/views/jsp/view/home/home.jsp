@@ -18,7 +18,7 @@
 	      		<form class="form-signin d-flex home-buttons-list" method="POST" onSubmit="logincall();return false">
 	        		<button id="btn-Log" onclick = "location.href = 'home/login'" class="btn btn-lg login" type="button">로그인</button>
 			        <button id="btn-Reg" onclick = "location.href = 'home/register'" class="btn btn-lg signin" type="button">회원가입</button>
-	        		<button id="btn-Con" onclick = "location.href = 'result/imgSelect'" class="btn btn-lg guest" type="button">그냥 쓸게요 :)</button>
+	        		<button id="btn-Con" onclick = "location.href = 'result/ocrResult'" class="btn btn-lg guest" type="button">그냥 쓸게요 :)</button>
 	      		</form>
 			</div>
 		</div>
