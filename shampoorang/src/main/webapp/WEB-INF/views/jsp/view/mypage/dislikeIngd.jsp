@@ -7,6 +7,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<link href="/css/mypage/dislikeIngd.css" rel="stylesheet">
+		<script type="text/javascript" src="/js/dislikeIngd.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -14,13 +15,13 @@
 			<form method="POST" action="">
 				<c:forEach items="${ingdList}" var="ingd">
 					<div class="form-check mt-2 mb-2">
-	  					<input class="form-check-input" type="checkbox" value="${ ingd.ingd_name }" id="flexCheckDefault">
-	  					<label class="form-check-label" for="flexCheckDefault">
+	  					<input class="form-check-input" type="checkbox" value="${ ingd.ingd_name }" name="ingd">
+	  					<label class="form-check-label" for="ingd">
 	    					${ ingd.ingd_name }
 	  					</label>
 					</div>   		
 				</c:forEach>
-				<input type="submit" value="저장">
+				<input type="submit" value="저장" onclick="getValue()">
 			</form>
 		</div>
 	</body>
