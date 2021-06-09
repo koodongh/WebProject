@@ -11,7 +11,10 @@
 	</head>
 	<body>
 		<div class="container">
-			<h3>샴푸 성분리스트</h3>
+			<div class="notice-text">
+				<h1>피해야 하는 성분 등록</h1>
+				<p>꼭 피해야 하는 성분을 선택한 후 저장해 주세요.<br/>해당 성분이 분석 결과에 포함되는지 알려드릴게요!</p>			
+			</div>
 			<form method="POST" action="">
 				<c:forEach items="${ingdList}" var="ingd">
 					<div class="form-check mt-2 mb-2">
@@ -21,7 +24,9 @@
 	  					</label>
 					</div>   		
 				</c:forEach>
-				<input type="submit" value="저장" onclick="getValue()">
+				<div class="d-flex justify-content-center">
+					<input class="btn btn-lg btn-secondary mt-3" type="submit" value="저장" onclick="getValue()">				
+				</div>
 			</form>
 		</div>
 	</body>
