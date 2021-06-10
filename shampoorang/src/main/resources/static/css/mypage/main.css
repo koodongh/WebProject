@@ -5,10 +5,11 @@
 }
 
 .greeting {
+	margin-top: 3rem;
     margin-bottom: 3rem;
 }
 
-.mypage-list h3 {
+.mypage-list h1 {
     text-align: center;
     margin-bottom: 3rem;
 }

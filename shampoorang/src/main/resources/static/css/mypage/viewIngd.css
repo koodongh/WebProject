@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.notice-text {
+	text-align: center;
+	padding-top: 3rem;
+}
+
+.notice-text p {
+	font-size: 14px;
+	color: grey;
+}
+
+form {
+	margin-top: 2rem;
+	margin-bottom: 100px;
+	margin-left: 2rem;
+}
+
+label {
+	font-size: 20px;
+}
