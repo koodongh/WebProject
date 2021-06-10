@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<link href="/css/mypage/dislikeIngd.css" rel="stylesheet">
+		<link href="/css/mypage/viewIngd.css" rel="stylesheet">
 		<script type="text/javascript" src="/js/dislikeIngd.js"></script>
 	</head>
 	<body>

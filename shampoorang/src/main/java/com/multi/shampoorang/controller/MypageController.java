@@ -20,18 +20,22 @@ public class MypageController {
 		return "mypage/main";
 	}
 	
-	@RequestMapping("/mypage/like")
-	public String mypageLike() {
-		return "mypage/likeIngd";
-	}
-	
 	@RequestMapping("/mypage/dislike")
-	public String viewProductList(Model model) {		
+	public String viewDislikeList(Model model) {		
 		
 		ArrayList<ProductVO> ingdList = service.ingdList();
 		model.addAttribute("ingdList", ingdList);
 		 
 		return "mypage/dislikeIngd"; 
+	}
+	
+	@RequestMapping("/mypage/like")
+	public String viewLikeList(Model model) {		
+		
+		ArrayList<ProductVO> ingdList = service.ingdList();
+		model.addAttribute("ingdList", ingdList);
+		 
+		return "mypage/likeIngd"; 
 	}
 	
 	@RequestMapping("/mypage/resultList")
