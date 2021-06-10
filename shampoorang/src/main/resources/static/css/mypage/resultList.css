@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.notice-text {
+	text-align: center;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+.notice-text p {
+	font-size: 14px;
+	color: grey;
+}
+
+.result-date {
+	flex-direction: column;
+}
