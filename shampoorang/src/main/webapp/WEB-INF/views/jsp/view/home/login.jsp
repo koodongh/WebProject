@@ -13,17 +13,23 @@
 				<h2>Log in</h2>
 			</div>
 			<div class="card-body">
-     			<form class="form-signin" method="POST" onSubmit="logincall();return false">
+     			<form class="form-signin" method="POST" onSubmit="logincall();return false" action="/loginCheck">
         			<h5 class="form-signin-heading">로그인 정보를 입력하세요</h5>
         			<label for="inputEmail" class="sr-only" >Your  ID</label>
-        			<input type="text" id="uid" class="form-control" placeholder="Your ID" required autofocus><BR>
+        			<input type="text" id="member_id" name = "member_id" class="form-control" placeholder="Your ID" required autofocus><BR>
         			<label for="inputPassword" class="sr-only" >Password</label>
-       			 	<input type="password" id="upw" class="form-control" placeholder="Password" required><br>
+       			 	<input type="password" id="member_pw" name = "member_pw" class="form-control" placeholder="Password" required><br>
         			<div class="button-location">
        					<button id="btn-Yes" class="btn btn-lg btn-primary btn-block" type="submit">>LOG IN</button>
      		 		</div>
      		 	</form>
+			
+				        <!-- 로그인 실패 시 에러 메시지 출력 -->
+		<c:if test="${not empty ERRORMSG}">
+	        <font color="red">
+	        	<p> ${ERRORMSG } </p>
+	        </font>
+    	</c:if> 
+			
 			</div>
-		</div>
-  	</body>
-</html>
+			
