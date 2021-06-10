@@ -29,7 +29,7 @@ public class MemberController {
 			session.setAttribute("sNick", vo.getMember_nickname());
 		}
 
-		return "/mypage/main";
+		return "redirect:/mypage/main";
 	}
 
 	// 로그 아웃
