@@ -20,7 +20,7 @@
 			         파일 :  <input type="file" id="uploadFile" name="uploadFile"> 
 				</div>	
 					<div class="result"> 
-				         <input type="submit" value="결과 확인">
+				         <input type="submit" value="텍스트 확인">
 					</div>  
 				</form><br><br>		
 				
@@ -28,7 +28,7 @@
 			<div id="resultDiv"></div>
 			
 			<br><br>
-			<a href="/">시작화면으로 이동</a>
+			<button type="button" class="btn btn-primary" id="save-ana">결과 분석</button>
 		</div>
 	</body>
 </html>
