@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ResultController {
 	
-	@RequestMapping("result/result")
+	@RequestMapping("result/allResult")
 	public String allResult() {
 		return "result/allResult";
 	}
