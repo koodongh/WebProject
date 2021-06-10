@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<%  String sNick = (String)session.getAttribute("sNick");%>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -12,7 +14,7 @@
 	<body>
 		<div class="container">
 	        <div class="greeting">
-	            <h3>"{ user1 }님,<br>오늘도 건강하고<br>안전한 하루 보내세요!"</h3>
+	            <h3>"{ <%= sNick %> }님,<br>오늘도 건강하고<br>안전한 하루 보내세요!"</h3>
 	        </div>
 	        <div class="d-flex mypage-list">
 	            <h3>내 성분 관리하기</h3>
