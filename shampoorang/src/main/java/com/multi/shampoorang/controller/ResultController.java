@@ -6,11 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ResultController {
 	
-	@RequestMapping("result/allResult")
-	public String allResult() {
-		return "result/allResult";
-	}
-	
 	@RequestMapping("result/badResult")
 	public String badResult() {
 		return "result/badResult";

@@ -1,6 +1,6 @@
 package com.multi.shampoorang.service;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -17,17 +17,8 @@ public class AnalysisService implements IAnalysisService {
 	IAnalysisDAO dao;
 
 	@Override
-	public AnalysisVO AnalysisCheck(String ocr_text) {
-
-		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("ocr_text", ocr_text);
-		return dao.AnalysisCheck(map);
-	}
-	
-	
-	@Override	 
-	public void join(AnalysisVO ana) {
-		dao.join(ana);
+	public ArrayList<AnalysisVO> analysisList() {
+		return dao.analysisList();
 	}
 	
 

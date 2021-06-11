@@ -22,13 +22,13 @@
 					<div class="result"> 
 				         <input type="submit" value="텍스트 확인">
 					</div>  
-				</form><br><br>		
+					</form><br><br>		
 				
 			<h3> OCR : 이미지에서 텍스트 추출 결과</h3>
 			<div id="resultDiv"></div>
 			
 			<br><br>
-			<button type="button" class="btn btn-primary" id="save-ana">결과 분석</button>
+			<button type="button" class="btn btn-primary" id="save-ana" onclick="location.href = 'analysisView'">결과 분석</button>
 		</div>
 	</body>
 </html>
