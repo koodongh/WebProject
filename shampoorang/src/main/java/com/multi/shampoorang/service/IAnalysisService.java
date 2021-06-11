@@ -1,10 +1,11 @@
 package com.multi.shampoorang.service;
 
+import java.util.ArrayList;
+
 import com.multi.shampoorang.model.AnalysisVO;
 
 public interface IAnalysisService {
 
-		AnalysisVO AnalysisCheck(String ocr_text);
-		void join(AnalysisVO ana);
+	ArrayList<AnalysisVO> analysisList();
 
-	}
+}
