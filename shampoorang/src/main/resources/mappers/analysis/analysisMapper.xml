@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.multi.shampoorang.dao.IAnalysisDAO">
+  		<resultMap id="AnalysisResult" type="com.multi.shampoorang.model.AnalysisVO">
+			<result property="ocr_text" column="ocr_text" />
+		</resultMap>
+		
+		
+	  	<select id="AnalysisList" resultMap="AnalysisResult">	  	  	
+			SELECT * FROM result ORDER BY ocr_text					
+		</select>
+	</mapper>
+		
