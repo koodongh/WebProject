@@ -15,7 +15,7 @@
   		<select id="loginCheck" resultMap="memResult" parameterType="hashmap">
   			<![CDATA[
 
-  				SELECT * FROM member_shampoorang 
+  				SELECT * FROM member
   				WHERE member_id=#{member_id} AND member_pw=#{member_pw}
   			]]>
 
@@ -27,7 +27,7 @@
   		</select> -->
   		
   		<select id="idCheck" resultType="int" parameterType="String">
-  			SELECT COUNT(member_id) FROM member_shampoorang WHERE member_id=#{member_id}
+  			SELECT COUNT(member_id) FROM member WHERE member_id=#{member_id}
   		</select>
   		
   				<!-- 맴버 등록 -->
@@ -35,7 +35,7 @@
 		
 		  	<![CDATA[
 		
-			INSERT INTO member_shampoorang (member_id, member_pw, member_nickname, member_result_list)
+			INSERT INTO member (member_id, member_pw, member_nickname, member_result_list)
 			VALUES (#{member_id}, #{member_pw}, #{member_nickname}, #{member_result_list})
   			]]>
 			
