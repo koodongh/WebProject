@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.multi.shampoorang.dao.IDislikeDAO">
+	<resultMap id="dislike" type="com.multi.shampoorang.model.DislikeVO">
+		<result property="dislike_id" column="dislike_id" />
+	    <result property="member_id" column="member_id" />
+	    <result property="ingd_name" column="ingd_name" />
+	</resultMap>
+	
+	<select id="dislikeList" resultMap="dislike">	  	  	
+		SELECT * FROM dislikes			
+	</select>
+</mapper>
