@@ -17,28 +17,29 @@
 				<p>꼭 피해야 하는 성분을 선택한 후 저장해 주세요.<br/>해당 성분이 분석 결과에 포함되는지 알려드릴게요!</p>			
 			</div>
 			<form method="POST" action="">
-				<c:forEach items="${ingdList}" var="ingd">
-						<c:if test="${ ingd.hazzard >= '4'}">
-							<div class="form-check mt-2 mb-2">
-			  					<input class="form-check-input" type="checkbox" value="${ ingd.ingd_name }" name="ingd">
-			  					<label class="form-check-label" for="ingd">
-			    					${ ingd.ingd_name }
-			  					</label>
-							</div>						
-						</c:if>
-				</c:forEach>
-				<c:forEach items="${ingdList}" var="ingd">
-						<c:if test="${ ingd.hazzard >= '4'}">
-							<div class="form-check mt-2 mb-2">
-			  					<input class="form-check-input" type="checkbox" value="${ ingd.ingd_name }" name="ingd">
-			  					<label class="form-check-label" for="ingd">
-			    					${ ingd.ingd_name }
-			  					</label>
-							</div>						
-						</c:if>
-				</c:forEach>
 				<c:forEach items="${ dislikeList }" var="dislike">
-					<p>${ dislike.ingd_name }</p>
+					<c:forEach items="${ ingdList }" var="ingd">
+							<c:if test="${ ingd.hazzard >= '4' }">
+								<c:choose>
+									<c:when test="${ dislike.ingd_name eq ingd.ingd_name }">
+										<div class="form-check mt-2 mb-2">
+						  					<input class="form-check-input" type="checkbox" checked="checked" value="${ ingd.ingd_name }" name="ingd">
+						  					<label class="form-check-label" for="ingd">
+						    					${ ingd.ingd_name }
+						  					</label>
+										</div>								
+									</c:when>
+									<c:otherwise>
+										<div class="form-check mt-2 mb-2">
+						  					<input class="form-check-input" type="checkbox" value="${ ingd.ingd_name }" name="ingd">
+						  					<label class="form-check-label" for="ingd">
+						    					${ ingd.ingd_name }
+						  					</label>
+										</div>									
+									</c:otherwise>
+								</c:choose>							
+							</c:if>					
+					</c:forEach>
 				</c:forEach>
 				<div class="d-flex justify-content-center">
 					<input class="btn btn-lg btn-secondary mt-3" type="submit" value="저장" onclick="getValue()">				
