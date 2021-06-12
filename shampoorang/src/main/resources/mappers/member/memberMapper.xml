@@ -35,8 +35,8 @@
 		
 		  	<![CDATA[
 		
-			INSERT INTO member (member_id, member_pw, member_nickname, member_result_list)
-			VALUES (#{member_id}, #{member_pw}, #{member_nickname}, #{member_result_list})
+			INSERT INTO member (member_id, member_pw, member_nickname)
+			VALUES (#{member_id}, #{member_pw}, #{member_nickname})
   			]]>
 			
 		</insert>
