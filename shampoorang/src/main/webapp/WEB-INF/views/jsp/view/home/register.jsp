@@ -16,12 +16,10 @@
 			</div>
 			<div class="card-body">
      			<form class="form-signin" method="POST" onSubmit="logincall();return false" action="/join">
-					<p>
 					<label for="inputEmail" class="sr-only" >ID</label>
        		 		<input type="text" id="uid" name="member_id" class="form-control" placeholder="ID" required autofocus>
        		 		<div class="button-location">
-        			<button type="button" id="idCheck">아이디확인</button><BR> 
-        			</p>
+        			<button type="button" class="btn btn-sm" id="idCheck">아이디확인</button><br/> 
         			</div>  
         			<label for="inputPassword" class="sr-only" >Password</label>
        		 		<input type="password" id="upw" name="member_pw" class="form-control" placeholder="Password" required><br>
@@ -30,7 +28,7 @@
        		 		<input type="hidden" id="member_result_list" name="member_result_list" class="form-control" value=" ">
 
         			<div class="button-location">
-       					<input id="btn-Yes" class="btn btn-lg btn-primary btn-block" type="submit" value="NEXT">
+       					<input id="btn-Yes" class="btn btn-lg btn-light" type="submit" value="NEXT">
      				</div>
      			</form>
 			</div>
