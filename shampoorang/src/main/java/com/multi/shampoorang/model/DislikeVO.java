@@ -23,4 +23,9 @@ public class DislikeVO {
 	public void setIngd_name(String ingd_name) {
 		this.ingd_name = ingd_name;
 	}
+	@Override
+	public String toString() {
+		return "DislikeVO [dislike_id=" + dislike_id + ", member_id=" + member_id + ", ingd_name=" + ingd_name + "]";
+	}
+	
 }

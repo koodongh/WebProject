@@ -16,7 +16,7 @@
 				<hr style="border: solid 6px rgb(245, 147, 147); border-radius: 10px;">
 				<p>꼭 피해야 하는 성분을 선택한 후 저장해 주세요.<br/>해당 성분이 분석 결과에 포함되는지 알려드릴게요!</p>			
 			</div>
-			<form method="POST" action="/mypage/insertDislikeIngd">
+			<form method="POST" action="/mypage/dislike/${ sid }/insertDislikeIngd">
 			
 			<c:forEach items="${ ingdList }" var="ingd">				
 				<c:set var="break" value="false" />

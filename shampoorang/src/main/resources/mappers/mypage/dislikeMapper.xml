@@ -15,8 +15,9 @@
 		WHERE member_id = #{member_id}
 	</select>
 	
-	<insert id="insertDislike" parameterType="com.multi.shampoorang.model.DislikeVO">
-		INSERT INTO dislikes (ingd_name) 
-		VALUES (#{ingd_name})
-	</insert>
+	<update id="insertDislike" parameterType="com.multi.shampoorang.model.DislikeVO">
+		UPDATE dislikes
+		SET member_id=#{member_id}, ingd_name=#{ingd_name} 
+		WHERE member_id=#{member_id}
+	</update>
 </mapper>
