@@ -2,15 +2,20 @@ package com.multi.shampoorang.controller;
 
 import java.util.ArrayList;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.multi.shampoorang.model.DislikeVO;
+import com.multi.shampoorang.model.MemberVO;
 import com.multi.shampoorang.model.ProductVO;
 import com.multi.shampoorang.service.DislikeService;
+import com.multi.shampoorang.service.MemberService;
 import com.multi.shampoorang.service.ProductService;
 
 @Controller
@@ -20,10 +25,17 @@ public class MypageController {
 	
 	@Autowired
 	DislikeService dislikeService;
+
+	@Autowired
+	MemberService service;
 	
 	@RequestMapping("/mypage/main")
-	public String mypage() {
-		return "mypage/main";
+	public String mypage(HttpSession session) {
+		if (session.getAttribute("sNick") != null) {
+			return "/mypage/main";
+		} else {
+			return "/home/home";
+		}
 	}
 	
 	@RequestMapping(value="/mypage/dislike/{member_id}")
@@ -52,10 +64,10 @@ public class MypageController {
 		return "mypage/resultList";
 	}
 	
-	@RequestMapping("/mypage/insertDislikeIngd")
+	@RequestMapping("/mypage/dislike/{member_id}/insertDislikeIngd")
 	public String insertDislikeIngd(DislikeVO dislike) {
-		
+		System.out.print(dislike.toString());
 		dislikeService.insertDislike(dislike);
-		return "redirect:/mypage/dislike";
+		return "redirect:/mypage/dislike/{member_id}";
 	}
 }
