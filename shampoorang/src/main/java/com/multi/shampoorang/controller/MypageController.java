@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.multi.shampoorang.model.DislikeVO;
@@ -25,13 +26,13 @@ public class MypageController {
 		return "mypage/main";
 	}
 	
-	@RequestMapping("/mypage/dislike")
-	public String viewDislikeList(Model model) {		
+	@RequestMapping(value="/mypage/dislike/{member_id}")
+	public String viewDislikeList(@PathVariable String member_id, Model model) {		
 		
 		ArrayList<ProductVO> ingdList = productService.ingdList();
 		model.addAttribute("ingdList", ingdList);
 		
-		ArrayList<DislikeVO> dislikeList = dislikeService.dislikeList();
+		ArrayList<DislikeVO> dislikeList = dislikeService.dislikeList(member_id);
 		model.addAttribute("dislikeList", dislikeList);
 		 
 		return "mypage/dislikeIngd"; 
@@ -49,5 +50,12 @@ public class MypageController {
 	@RequestMapping("/mypage/resultList")
 	public String mypageResultList() {
 		return "mypage/resultList";
+	}
+	
+	@RequestMapping("/mypage/insertDislikeIngd")
+	public String insertDislikeIngd(DislikeVO dislike) {
+		
+		dislikeService.insertDislike(dislike);
+		return "redirect:/mypage/dislike";
 	}
 }
