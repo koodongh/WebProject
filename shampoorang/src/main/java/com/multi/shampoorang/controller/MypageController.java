@@ -52,10 +52,10 @@ public class MypageController {
 		return "mypage/resultList";
 	}
 	
-	@RequestMapping("/mypage/insertDislikeIngd")
+	@RequestMapping("/mypage/dislike/{member_id}/insertDislikeIngd")
 	public String insertDislikeIngd(DislikeVO dislike) {
-		
+		System.out.print(dislike.toString());
 		dislikeService.insertDislike(dislike);
-		return "redirect:/mypage/dislike";
+		return "redirect:/mypage/dislike/{member_id}";
 	}
 }
