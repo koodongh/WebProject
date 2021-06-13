@@ -16,7 +16,12 @@ public class DislikeService implements IDislikeService {
 	IDislikeDAO dao;
 	
 	@Override
-	public ArrayList<DislikeVO> dislikeList() {
-		return dao.dislikeList();
+	public ArrayList<DislikeVO> dislikeList(String member_id) {
+		return dao.dislikeList(member_id);
+	}
+	
+	@Override
+	public void insertDislike(DislikeVO dislike) {
+		dao.insertDislike(dislike);
 	}
 }

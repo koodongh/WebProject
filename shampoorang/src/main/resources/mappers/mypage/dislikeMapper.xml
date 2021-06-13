@@ -10,7 +10,13 @@
 	    <result property="ingd_name" column="ingd_name" />
 	</resultMap>
 	
-	<select id="dislikeList" resultMap="dislike">	  	  	
-		SELECT * FROM dislikes			
+	<select id="dislikeList" resultMap="dislike" parameterType="String">	  	  	
+		SELECT * FROM dislikes
+		WHERE member_id = #{member_id}
 	</select>
+	
+	<insert id="insertDislike" parameterType="com.multi.shampoorang.model.DislikeVO">
+		INSERT INTO dislikes (ingd_name) 
+		VALUES (#{ingd_name})
+	</insert>
 </mapper>
