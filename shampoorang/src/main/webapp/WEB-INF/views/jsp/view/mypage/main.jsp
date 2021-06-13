@@ -19,7 +19,7 @@
 	            <button class="btn bad-btn" onclick = "location.href = 'dislike/${ sid }'"><h4>피해야 하는 성분</h4></button>
 	            <button class="btn search-btn" onclick = "location.href = 'resultList'"><h4>검색한 샴푸 성분 보기</h4></button>
 	            <h3></h3>
-				<button class="btn logout-btn" onclick = "location.href='/logout'" value="Submit"><h4>로그아웃</h4></button>
+				<button class="btn btn-light logout-btn" onclick = "location.href='/logout'" value="Submit"><h4>로그아웃</h4></button>
 	        </div>
     	</div>
 	</body>

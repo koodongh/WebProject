@@ -22,10 +22,20 @@
 .card-body button {
 	width:15rem;
 	color : #ffffff;
-	background:#000000;
 	margin-top: 10px;
 }
 
 .button-location {
 	text-align:center;
+}
+
+#btn-Yes {
+	color: black;
+}
+
+#idCheck {
+	background-color: none;
+	border: 2px solid #f8f9fa;
+	border-radius: 10px;
+	color: black;
 }
