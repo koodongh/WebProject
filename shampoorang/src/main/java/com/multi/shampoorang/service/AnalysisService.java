@@ -21,5 +21,8 @@ public class AnalysisService implements IAnalysisService {
 		return dao.analysisList();
 	}
 	
-
+	@Override
+	public ArrayList<AnalysisVO> memberAnalysisList() {
+		return dao.memberAnalysisList();
+	}
 }

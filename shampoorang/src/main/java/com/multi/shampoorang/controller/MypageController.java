@@ -9,17 +9,20 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
+import com.multi.shampoorang.model.AnalysisVO;
 import com.multi.shampoorang.model.DislikeVO;
-import com.multi.shampoorang.model.MemberVO;
 import com.multi.shampoorang.model.ProductVO;
+import com.multi.shampoorang.service.AnalysisService;
 import com.multi.shampoorang.service.DislikeService;
 import com.multi.shampoorang.service.MemberService;
 import com.multi.shampoorang.service.ProductService;
 
 @Controller
 public class MypageController {
+	@Autowired
+	AnalysisService analysisService;
+	
 	@Autowired
 	ProductService productService;
 	
@@ -59,8 +62,12 @@ public class MypageController {
 		return "mypage/likeIngd"; 
 	}
 	
-	@RequestMapping("/mypage/resultList")
-	public String mypageResultList() {
+	@RequestMapping("/mypage/resultList/{member_id}")
+	public String mypageResultList(Model model) {
+		
+	    ArrayList<AnalysisVO> memberAnalysisList = analysisService.analysisList();
+		model.addAttribute("memberAnalysisList", memberAnalysisList);
+
 		return "mypage/resultList";
 	}
 	
