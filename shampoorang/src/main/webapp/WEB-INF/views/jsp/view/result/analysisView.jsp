@@ -23,18 +23,24 @@
 				
 				<div class="all-ingredient">
 					<h3 class="text-center">전 성분</h3>
-				  	 <c:forEach items="${analysisList}" var="ana">   
-						<tr>
-				     		 <td>${ana.ocr_text}</td>	
-				   		</tr>
-				   		<br>		
-					</c:forEach>
+				  		<c:forEach items="${analysisList}" var="ana">   
+							<tr>
+					     		 <td>${ana.ocr_text}</td>	
+					   		</tr>
+					   		<br>		
+						</c:forEach>
 				</div>
 				
 				<div class="bad-ingredient">
 					<h3 class="text-center">나쁜 성분</h3>
-					<h4 class="text-center">가나다라 마바사아</h4>
-					<h4 class="text-center">가나다라 마바사아</h4>
+						<c:forEach items="${ingdList}" var="ingd">
+							<c:if test="${ ingd.ewg >= '3'}">   
+								<tr>
+						     		 "${ ingd.ingd_name }"
+						   		</tr>
+						   		<br>
+						   	</c:if>		
+						</c:forEach>
 				</div>
 	
 				<div class="card-body">
@@ -44,9 +50,14 @@
 							성분 자세히 보기</button>
 						<div class="good-ingredient">
 							<h3 class="text-center">좋은 성분</h3>
-							<h4 class="text-center">가나다라 마바사아</h4>
-							<h4 class="text-center">가나다라 마바사아</h4>
-							<br>
+								<c:forEach items="${ingdList}" var="ingd">
+									<c:if test="${ ingd.ewg < '3'}">   
+										<tr>
+						     				 <value="${ ingd.ingd_name }" name="ingd">	
+						   				</tr>
+						   				<br>
+					   				</c:if>		
+								</c:forEach>
 						</div>
 						<button id="btn-good" onclick="location.href = 'goodResult'"
 							class="btn btn-lg btn-primary btn-block" type="button">좋은

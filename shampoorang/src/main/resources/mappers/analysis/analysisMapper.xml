@@ -10,6 +10,16 @@
 			<result property="ocr_text" column="ocr_text" />
 		</resultMap>
 		
+		<!-- OCR 등록 -->
+		<insert id="Ocr" parameterType="com.multi.shampoorang.model.AnalysisVO">
+		
+		  	<![CDATA[
+		
+			INSERT INTO OCR_result (result_id, member_id, ocr_text)
+			VALUES (#{result_id}, #{member_id}, #{ocr_text})
+  			]]>
+			
+		</insert>
 		
 	  	<select id="analysisList" resultMap="analysisResult">	  	  	
 			SELECT * FROM OCR_result ORDER BY result_id					
