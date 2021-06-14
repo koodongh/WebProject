@@ -15,7 +15,7 @@
 			processData:false, //필수
 			contentType:false, //필수
 			success:function(result){
-				$('#resultDiv').text(result);
+				$('#ocr_text').text(result);
 			},
 			error:function(e){
 				alert("에러 발생 : " + e);

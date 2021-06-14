@@ -9,4 +9,7 @@ public interface IAnalysisService {
 	ArrayList<AnalysisVO> analysisList();
 	ArrayList<AnalysisVO> detailResult(String result_id);
 	ArrayList<AnalysisVO> memberAnalysisList(String member_id);
+	void Ocr(AnalysisVO ocr);
+
+
 }
