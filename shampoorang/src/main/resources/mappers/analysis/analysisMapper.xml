@@ -8,18 +8,21 @@
 			<result property="result_id" column="result_id" />
 	        <result property="member_id" column="member_id" />
 			<result property="ocr_text" column="ocr_text" />
-			<result property="joinDate" column="joinDate" />
 		</resultMap>
 		
+		<!-- OCR 등록 -->
+		<insert id="Ocr" parameterType="com.multi.shampoorang.model.AnalysisVO">
+		
+		  	<![CDATA[
+		
+			INSERT INTO OCR_result (result_id, member_id, ocr_text)
+			VALUES (#{result_id}, #{member_id}, #{ocr_text})
+  			]]>
+			
+		</insert>
 		
 	  	<select id="analysisList" resultMap="analysisResult">	  	  	
 			SELECT * FROM OCR_result ORDER BY result_id					
-		</select>
-		
-		<select id="memberAnalysisList" resultMap="analysisResult">
-			SELECT * FROM OCR_result 
-			WHERE member_id = #{member_id}
-			ORDER BY joinDate
 		</select>
 	</mapper>
 		

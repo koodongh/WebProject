@@ -28,12 +28,21 @@ public class TilesController {
         return "index";
     }
     
-	@RequestMapping("/ingd/ingdListView")
+	@RequestMapping("/result/badResult")
 	public String viewProductList(Model model) {		
 		
 		ArrayList<ProductVO> ingdList = service.ingdList();
 		model.addAttribute("ingdList", ingdList);
 		 
-		return "/jsp/view/ingd/ingdListView"; 
+		return "/result/badResult"; 
+	}
+	
+	@RequestMapping("/result/goodResult")
+	public String viewProductList2(Model model) {		
+		
+		ArrayList<ProductVO> ingdList = service.ingdList();
+		model.addAttribute("ingdList", ingdList);
+		 
+		return "/result/goodResult"; 
 	}
 }

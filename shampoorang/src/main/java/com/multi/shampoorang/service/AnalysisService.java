@@ -20,6 +20,11 @@ public class AnalysisService implements IAnalysisService {
 	public ArrayList<AnalysisVO> analysisList() {
 		return dao.analysisList();
 	}
+
+	@Override	 
+	public void Ocr(AnalysisVO ocr) {
+		dao.Ocr(ocr);
+	}
 	
 	@Override
 	public ArrayList<AnalysisVO> memberAnalysisList(String member_id) {

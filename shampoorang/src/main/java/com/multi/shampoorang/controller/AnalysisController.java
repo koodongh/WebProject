@@ -3,6 +3,8 @@ package com.multi.shampoorang.controller;
 
 import java.util.ArrayList;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,6 +26,13 @@ public class AnalysisController {
 	model.addAttribute("analysisList", analysisList);
 		 
 	return "/result/analysisView"; 
+	}
+    
+    @RequestMapping("/result/ocr")
+	public String Ocr(AnalysisVO ocr, HttpSession session) {
+
+		((AnalysisService) service).Ocr(ocr);
+		return "redirect:/result/analysisView";
 	}
     
 	@RequestMapping("/mypage/resultList/{member_id}/{result_id}")
