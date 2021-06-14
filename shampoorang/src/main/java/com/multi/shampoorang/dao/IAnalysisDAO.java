@@ -8,4 +8,5 @@ public interface IAnalysisDAO {
 
 	ArrayList<AnalysisVO> analysisList();
 	ArrayList<AnalysisVO> memberAnalysisList(String member_id);
+	void Ocr(AnalysisVO ocr);
 }

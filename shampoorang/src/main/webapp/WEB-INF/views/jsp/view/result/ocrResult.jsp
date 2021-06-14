@@ -25,11 +25,14 @@
 					</form><br><br>		
 				
 			<h3> OCR : 이미지에서 텍스트 추출 결과</h3>
-			<div id="resultDiv"></div>
-			
+			<form action="/result/ocr" method="POST">
+			<textarea id="ocr_text" name="ocr_text" rows="10" cols="50" ></textarea>
+		
 			<br><br>
-			<button type="button" class="btn btn-primary" id="save-ana" onclick="location.href = 'analysisView'">결과 분석</button>
+			<button type="submit" class="btn btn-primary" id="submit">결과 분석</button>
+		    </form>
 		</div>
 	</body>
 </html>
+
 

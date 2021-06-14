@@ -30,3 +30,17 @@
 	font-size: 20px;
 	margin-top: 10px;
 }
+
+.table {
+	margin-top:50px;
+}
+.table h2 {
+	font-size:30px;
+	margin-top:20px;
+}
+
+.table h3 {
+	font-size:20px;
+	color:red;
+	margin-top:-20px;
+}
