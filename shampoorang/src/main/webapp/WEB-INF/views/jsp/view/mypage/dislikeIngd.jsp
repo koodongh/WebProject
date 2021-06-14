@@ -22,17 +22,15 @@
 				<c:set var="break" value="false" />
 				<c:forEach items="${ dislikeList }" var="dislike">
 					<c:if test="${break ne true}">
-						<c:if test="${ ingd.hazzard >= '4' }">
-							<c:choose>
-								<c:when test="${ dislike.ingd_name eq ingd.ingd_name }">
-									<c:set var="checkedValue" value="checked" />	
-									<c:set var="break" value="true" />			
-								</c:when>
-								<c:otherwise>
-									<c:set var="checkedValue" value="" />								
-								</c:otherwise>
-							</c:choose>							
-						</c:if>		
+						<c:choose>
+							<c:when test="${ dislike.ingd_name eq ingd.ingd_name }">
+								<c:set var="checkedValue" value="checked" />	
+								<c:set var="break" value="true" />			
+							</c:when>
+							<c:otherwise>
+								<c:set var="checkedValue" value="" />								
+							</c:otherwise>
+						</c:choose>							
 					</c:if>					
 				</c:forEach> 
 					
@@ -42,14 +40,12 @@
 						${ ingd.ingd_name }
 					</label>
 				</div>
+				
 			</c:forEach>				
-				<div class="d-flex justify-content-center">
-					<input class="btn btn-lg btn-secondary mt-3" type="submit" value="저장"">				
-				</div>
+			<div class="d-flex justify-content-center">
+				<input class="btn btn-lg btn-secondary mt-3" type="submit" value="저장"">				
+			</div>
 			</form>
-			<c:forEach items="${ dislikeList }" var="dislike">
-				<p>${ dislike.ingd_name }</p>
-			</c:forEach>
 		</div>
 	</body>
 </html>
