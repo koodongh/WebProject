@@ -18,7 +18,7 @@
 			</div>
 			<c:forEach items="${memberAnalysisList}" var="analysis">
 				<div class="result-date d-flex justify-content-center">
-					<button class="date btn btn-lg btn-light mb-2">
+					<button class="date btn btn-lg btn-light mb-2" onclick = "location.href = '/mypage/resultList/${analysis.member_id}/${analysis.result_id}'">
 						<fmt:formatDate value="${ analysis.joinDate }" pattern="yyyy-MM-dd a hh:mm" var="date"/>
 						<c:out value="${ date }"/>
 					</button>

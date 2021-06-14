@@ -25,4 +25,9 @@ public class AnalysisController {
 		 
 	return "/result/analysisView"; 
 	}
+    
+	@RequestMapping("/mypage/resultList/{member_id}/{result_id}")
+	public String viewDetailResult() {
+	return "/result/analysisView";	
+	}
 }

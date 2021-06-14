@@ -7,5 +7,5 @@ import com.multi.shampoorang.model.AnalysisVO;
 public interface IAnalysisDAO {
 
 	ArrayList<AnalysisVO> analysisList();
-	ArrayList<AnalysisVO> memberAnalysisList();
+	ArrayList<AnalysisVO> memberAnalysisList(String member_id);
 }

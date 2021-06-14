@@ -22,7 +22,7 @@ public class AnalysisService implements IAnalysisService {
 	}
 	
 	@Override
-	public ArrayList<AnalysisVO> memberAnalysisList() {
-		return dao.memberAnalysisList();
+	public ArrayList<AnalysisVO> memberAnalysisList(String member_id) {
+		return dao.memberAnalysisList(member_id);
 	}
 }

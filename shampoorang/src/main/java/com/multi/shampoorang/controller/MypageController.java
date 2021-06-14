@@ -63,9 +63,9 @@ public class MypageController {
 	}
 	
 	@RequestMapping("/mypage/resultList/{member_id}")
-	public String mypageResultList(Model model) {
+	public String mypageResultList(@PathVariable String member_id, Model model) {
 		
-	    ArrayList<AnalysisVO> memberAnalysisList = analysisService.analysisList();
+	    ArrayList<AnalysisVO> memberAnalysisList = analysisService.memberAnalysisList(member_id);
 		model.addAttribute("memberAnalysisList", memberAnalysisList);
 
 		return "mypage/resultList";
