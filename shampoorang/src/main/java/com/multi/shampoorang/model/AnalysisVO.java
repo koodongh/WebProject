@@ -1,9 +1,12 @@
 package com.multi.shampoorang.model;
 
+import java.util.Date;
+
 public class AnalysisVO {
 	private String Result_id;
 	private String member_id;
 	private String ocr_text;
+	private Date joinDate;
 	
 	public String getResult_id() {
 		return Result_id;
@@ -23,5 +26,11 @@ public class AnalysisVO {
 	public void setOcr_text(String ocr_text) {
 		this.ocr_text = ocr_text;
 	}
-
+	public Date getJoinDate() {
+		return joinDate;
+	}
+	public void setJoinDate(Date joinDate) {
+		this.joinDate = joinDate;
+	}
+	
 }
