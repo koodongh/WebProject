@@ -53,13 +53,11 @@ public class MypageController {
 		return "mypage/dislikeIngd"; 
 	}
 	
-	@RequestMapping("/mypage/like")
-	public String viewLikeList(Model model) {		
-		
-		ArrayList<ProductVO> ingdList = productService.ingdList();
-		model.addAttribute("ingdList", ingdList);
-		 
-		return "mypage/likeIngd"; 
+	@RequestMapping("/mypage/dislike/{member_id}/insertDislikeIngd")
+	public String insertDislikeIngd(DislikeVO dislike) {
+		System.out.print(dislike.toString());
+		dislikeService.insertDislike(dislike);
+		return "redirect:/mypage/dislike/{member_id}";
 	}
 	
 	@RequestMapping("/mypage/resultList/{member_id}")
@@ -69,12 +67,5 @@ public class MypageController {
 		model.addAttribute("memberAnalysisList", memberAnalysisList);
 
 		return "mypage/resultList";
-	}
-	
-	@RequestMapping("/mypage/dislike/{member_id}/insertDislikeIngd")
-	public String insertDislikeIngd(DislikeVO dislike) {
-		System.out.print(dislike.toString());
-		dislikeService.insertDislike(dislike);
-		return "redirect:/mypage/dislike/{member_id}";
 	}
 }
