@@ -8,6 +8,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.multi.shampoorang.model.AnalysisVO;
@@ -36,7 +37,11 @@ public class AnalysisController {
 	}
     
 	@RequestMapping("/mypage/resultList/{member_id}/{result_id}")
-	public String viewDetailResult() {
-	return "/result/analysisView";	
+	public String mypageDetailResult(@PathVariable String member_id, @PathVariable String result_id, Model model) {
+		
+		ArrayList<AnalysisVO> detailResult = service.detailResult(result_id);
+		model.addAttribute("detailResult", detailResult);
+		
+		return "/result/resultDetailView";
 	}
 }

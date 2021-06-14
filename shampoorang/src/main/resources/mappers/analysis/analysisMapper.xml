@@ -24,5 +24,16 @@
 	  	<select id="analysisList" resultMap="analysisResult">	  	  	
 			SELECT * FROM OCR_result ORDER BY result_id					
 		</select>
+		
+		<select id="detailResult" resultMap="analysisResult" parameterType="String">	  	  	
+			SELECT * FROM OCR_result
+			WHERE result_id=#{result_id}
+		</select>
+		
+		<select id="memberAnalysisList" resultMap="analysisResult">
+			SELECT * FROM OCR_result 
+			WHERE member_id = #{member_id}
+			ORDER BY joinDate
+		</select>
 	</mapper>
 		
