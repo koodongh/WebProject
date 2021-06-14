@@ -1,15 +1,15 @@
 package com.multi.shampoorang.model;
 
 public class DislikeVO {
-	private String dislike_id;
+	private String dislikes_id;
 	private String member_id;
 	private String ingd_name;
 
-	public String getDislike_id() {
-		return dislike_id;
+	public String getDislikes_id() {
+		return dislikes_id;
 	}
-	public void setDislike_id(String dislike_id) {
-		this.dislike_id = dislike_id;
+	public void setDislikes_id(String dislikes_id) {
+		this.dislikes_id = dislikes_id;
 	}
 	public String getMember_id() {
 		return member_id;
@@ -25,7 +25,7 @@ public class DislikeVO {
 	}
 	@Override
 	public String toString() {
-		return "DislikeVO [dislike_id=" + dislike_id + ", member_id=" + member_id + ", ingd_name=" + ingd_name + "]";
+		return "DislikeVO [dislike_id=" + dislikes_id + ", member_id=" + member_id + ", ingd_name=" + ingd_name + "]";
 	}
 	
 }
