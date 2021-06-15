@@ -12,25 +12,31 @@
 	</head>
 	<body>
 		<div class="container">
-			<h2>샴푸 분석</h2>
-			<h3>샴푸성분 캡쳐사진 업로드</h3>
-			<h4>(샴푸 성분이 보이도록 뒷면을 찍어주세요!)</h4>
-				<div class="file">
-					<form id="ocrForm"  method="post" enctype="multipart/form-data">	         
-			         파일 :  <input type="file" id="uploadFile" name="uploadFile"> 
-				</div>	
-					<div class="result"> 
-				         <input type="submit" value="텍스트 확인">
-					</div>  
-					</form><br><br>		
-				
-			<h3> OCR : 이미지에서 텍스트 추출 결과</h3>
-			<form action="/result/ocr" method="POST">
-			<textarea id="ocr_text" name="ocr_text" rows="10" cols="50" ></textarea>
-		
-			<br><br>
-			<button type="submit" class="btn btn-primary" id="submit">결과 분석</button>
-		    </form>
+			<div class="notice-text">
+				<h1>샴푸 성분 분석</h1>
+				<hr style="border: solid 6px rgb(76 185 249); border-radius: 10px;">
+			</div>
+			<div class="file">
+				<h5 class="text-center">샴푸성분 캡쳐사진 업로드</h5>
+				<form id="ocrForm" method="post" enctype="multipart/form-data">
+					<p class="text-center">샴푸 뒷면의 성분표를 찍어주세요!</p>
+					<input type="file" id="uploadFile" name="uploadFile">
+					<div class="result">
+						<input class="btn btn-lg mt-3" type="submit" value="텍스트 확인">
+					</div>
+				</form>
+			</div>
+			<div class="ocr">
+				<h5> OCR : 이미지 텍스트 추출 결과</h5>
+				<form action="/result/ocr" method="POST">
+					<div class="d-flex justify-content-center">
+						<textarea id="ocr_text" name="ocr_text" rows="10" cols="40" ></textarea>					
+					</div>
+					<div class="result-btn d-flex justify-content-center mt-3">
+						<button type="submit" class="btn btn-lg" id="submit">결과 분석</button>					
+					</div>
+			    </form>
+			</div>
 		</div>
 	</body>
 </html>
