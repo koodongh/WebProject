@@ -16,5 +16,10 @@
 	  	<select id="ingdList" resultMap="ingdResult">	  	  	
 			SELECT * FROM ingd_list ORDER BY ingd_name					
 		</select>
+		
+		<select id="productDetailView" resultMap="ingdResult" parameterType="String">	  	  	
+			SELECT * FROM ingd_list WHERE ingd_name=#{ingd_name}					
+		</select>
+		
 	</mapper>
 		
