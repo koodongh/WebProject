@@ -132,7 +132,14 @@
         		<version>${slf4j.version}</version> 
         		<scope>runtime</scope> 
         	</dependency>
-	
+		
+		<dependency>
+			<groupId>ojdbc</groupId>
+			<artifactId>ojdbc</artifactId>
+			<version>14</version>
+			<scope>system</scope>
+			<systemPath>C:\Users\82106\Downloads\ojdbc14.jar</systemPath>
+		</dependency>
 	</dependencies>
 
 	<build>
