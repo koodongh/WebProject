@@ -18,7 +18,10 @@
 			</div>
 			<div class="dislikeList">
 				<c:forEach items="${ dislikeList }" var="dislike">
-					<h4>${ dislike.ingd_name }</h4>
+					<div class="dislike-name">
+						<h4>${ dislike.ingd_name }</h4>
+						<button class="btn btn-sm btn-warning">X</button>
+					</div>
 				</c:forEach>
 			</div>
 			<div class="d-flex justify-content-center mt-4 mb-5">

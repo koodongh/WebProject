@@ -23,3 +23,13 @@ label {
 .dislikeList {
 	margin: 3rem 3rem;
 }
+
+.dislike-name {
+	display: flex;
+	flex-direction: row;
+}
+
+.dislike-name button {
+	align-items: center;
+	margin-right: 0;
+}
