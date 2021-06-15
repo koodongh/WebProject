@@ -42,7 +42,7 @@
 					</c:if>	
 				</c:forEach>				
 				<div class="d-flex justify-content-center">
-					<input class="btn btn-lg btn-secondary mt-3" type="submit" value="저장"">				
+					<input class="btn btn-lg btn-light mt-3" type="submit" value="저장"">				
 				</div>
 			</form>
 		</div>

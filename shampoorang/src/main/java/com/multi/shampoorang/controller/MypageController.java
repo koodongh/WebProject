@@ -62,6 +62,12 @@ public class MypageController {
 		return "mypage/dislikeIngd"; 
 	}	
 	
+	@RequestMapping(value="/mypage/dislike/{member_id}/{dislikes_id}/delete")
+	public String deleteDislike(@PathVariable String member_id, @PathVariable String dislikes_id) {
+		dislikeService.deleteDislike(dislikes_id);
+		return "redirect:/mypage/dislike/{member_id}";
+	}
+	
 	@RequestMapping("/mypage/dislike/{member_id}/insertDislikeIngd")
 	public String insertDislikeIngd(@RequestParam("ingd") String[] ingds, @PathVariable String member_id) {
 		for (int i = 0; i < ingds.length; i++) {

@@ -21,7 +21,10 @@ label {
 }
 
 .dislikeList {
-	margin: 3rem 3rem;
+	margin-top: 1rem;
+	margin-bottom: 8rem;
+	margin-right: 3rem;
+	margin-left: 3rem;
 }
 
 .dislike-name {
@@ -32,4 +35,19 @@ label {
 .dislike-name button {
 	align-items: center;
 	margin-right: 0;
+	background-color: rgb(245, 147, 147);
 }
+
+@media screen and (min-width: 376px) {
+	li {
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	li {
+		font-size: 14px;
+	}
+}
+
+
