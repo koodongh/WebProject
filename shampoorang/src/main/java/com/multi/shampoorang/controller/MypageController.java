@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.multi.shampoorang.model.AnalysisVO;
 import com.multi.shampoorang.model.DislikeVO;
@@ -42,6 +43,14 @@ public class MypageController {
 	}
 	
 	@RequestMapping(value="/mypage/dislike/{member_id}")
+	public String viewMemberDislikeList(@PathVariable String member_id, Model model) {
+		ArrayList<DislikeVO> dislikeList = dislikeService.dislikeList(member_id);
+		model.addAttribute("dislikeList", dislikeList);
+		
+		return "mypage/memberDislike";
+	}
+	
+	@RequestMapping(value="/mypage/dislike/{member_id}/edit")
 	public String viewDislikeList(@PathVariable String member_id, Model model) {		
 		
 		ArrayList<ProductVO> ingdList = productService.ingdList();
@@ -51,12 +60,13 @@ public class MypageController {
 		model.addAttribute("dislikeList", dislikeList);
 		 
 		return "mypage/dislikeIngd"; 
-	}
+	}	
 	
 	@RequestMapping("/mypage/dislike/{member_id}/insertDislikeIngd")
-	public String insertDislikeIngd(DislikeVO dislike) {
-		System.out.print(dislike.toString());
-		dislikeService.insertDislike(dislike);
+	public String insertDislikeIngd(@RequestParam("ingd") String[] ingds, @PathVariable String member_id) {
+		for (int i = 0; i < ingds.length; i++) {
+			dislikeService.insertDislike(ingds[i], member_id);
+		}
 		return "redirect:/mypage/dislike/{member_id}";
 	}
 	

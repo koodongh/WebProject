@@ -1,6 +1,7 @@
 package com.multi.shampoorang.service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -21,7 +22,10 @@ public class DislikeService implements IDislikeService {
 	}
 	
 	@Override
-	public void insertDislike(DislikeVO dislike) {
-		dao.insertDislike(dislike);
+	public void insertDislike(String ingd_name, String member_id) {
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("ingd_name", ingd_name);
+		map.put("member_id", member_id);
+		dao.insertDislike(map);
 	}
 }
