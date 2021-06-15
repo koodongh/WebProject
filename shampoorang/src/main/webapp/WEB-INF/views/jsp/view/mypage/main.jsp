@@ -7,12 +7,13 @@
 	<head>
 		<meta charset="UTF-8">
 		<link href="/css/mypage/main.css" rel="stylesheet">
-	</head>
+  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  	</head>
 	<body>
 		<div class="container">
 	        <div class="greeting">
 	        	<hr/>
-	            <h3 class="text-center">"${ sNick }님,<br>오늘도 건강하고<br>안전한 하루 보내세요!"</h3>
+	            <h3 class="animate__animated animate__fadeInDown text-center">"${ sNick }님,<br>오늘도 건강하고<br>안전한 하루 보내세요!"</h3>
 	            <hr/>
 	        </div>
 	        <div class="d-flex mypage-list">
