@@ -6,5 +6,6 @@ import com.multi.shampoorang.model.DislikeVO;
 
 public interface IDislikeService {
 	ArrayList<DislikeVO> dislikeList(String member_id);
-	void insertDislike(DislikeVO dislike);
+	void insertDislike(String ingd_name, String member_id);
+	void deleteDislike(String dislikes_id);
 }

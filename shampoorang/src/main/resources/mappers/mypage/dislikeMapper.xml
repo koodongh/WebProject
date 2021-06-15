@@ -15,8 +15,12 @@
 		WHERE member_id = #{member_id}
 	</select>
 	
-	<insert id="insertDislike" parameterType="com.multi.shampoorang.model.DislikeVO">
-		INSERT INTO dislikes (dislikes_id, member_id, ingd_name)
-		VALUES (#{dislikes_id}, #{member_id}, #{ingd_name})
+	<insert id="insertDislike" parameterType="hashmap">
+			INSERT INTO dislikes (member_id, ingd_name)
+			VALUES (#{member_id}, #{ingd_name})
 	</insert>
+	
+	<delete id="deleteDislike"  parameterType="String">
+			DELETE FROM dislikes WHERE dislikes_id=#{dislikes_id} 
+	</delete>
 </mapper>
