@@ -19,4 +19,8 @@
 			INSERT INTO dislikes (member_id, ingd_name)
 			VALUES (#{member_id}, #{ingd_name})
 	</insert>
+	
+	<delete id="deleteDislike"  parameterType="String">
+			DELETE FROM dislikes WHERE dislikes_id=#{dislikes_id} 
+	</delete>
 </mapper>

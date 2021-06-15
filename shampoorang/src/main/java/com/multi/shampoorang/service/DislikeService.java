@@ -28,4 +28,9 @@ public class DislikeService implements IDislikeService {
 		map.put("member_id", member_id);
 		dao.insertDislike(map);
 	}
+	
+	@Override
+	public void deleteDislike(String dislikes_id) {
+		dao.deleteDislike(dislikes_id);
+	}
 }

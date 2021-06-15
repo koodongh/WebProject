@@ -20,7 +20,7 @@
 				<c:forEach items="${ dislikeList }" var="dislike">
 					<div class="dislike-name">
 						<h4>${ dislike.ingd_name }</h4>
-						<button class="btn btn-sm btn-warning">X</button>
+						<button class="btn btn-sm btn-warning" onclick = "location.href = '/mypage/dislike/${ dislike.member_id }/${ dislike.dislikes_id }/delete'">X</button>
 					</div>
 				</c:forEach>
 			</div>
