@@ -141,12 +141,14 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-		</plugins>
-	</build>
+			
 			<plugin>
 			 	<groupId>org.apache.maven.plugins</groupId> 
 			 	<artifactId>maven-resources-plugin</artifactId> 
 			 	<version>3.1.0</version> 
 			</plugin> 
-		</plugins>	
+		</plugins>
+	</build>
+
+	
 </project>
