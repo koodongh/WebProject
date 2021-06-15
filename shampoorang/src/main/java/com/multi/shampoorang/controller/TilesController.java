@@ -28,7 +28,7 @@ public class TilesController {
         return "index";
     }
     
-	@RequestMapping("/result/badResult")
+    @RequestMapping("/result/badResult")
 	public String viewProductList(Model model) {		
 		
 		ArrayList<ProductVO> ingdList = service.ingdList();

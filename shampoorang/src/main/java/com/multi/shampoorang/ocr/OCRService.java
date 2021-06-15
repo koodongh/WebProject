@@ -9,6 +9,8 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 import org.json.JSONArray;
@@ -70,10 +72,10 @@ public class OCRService {
 			}
 			br.close();
 
-			System.out.println(response);  //JSON �삎�떇�쓽 臾몄옄�뿴 異쒕젰			
+			System.out.println(response);  		
 			System.out.println(response.toString()); 
 			
-			result = jsonToString(response.toString()); // 寃곌낵 諛섑솚
+			result = jsonToString(response.toString()); 
 			System.out.println(result);
 		} catch (Exception e) {
 			System.out.println(e);
@@ -117,32 +119,38 @@ public class OCRService {
 	out.flush();
  }
 	
-	// �씠誘몄��뿉�꽌 �뀓�뒪�듃 異붿텧 
-	// JSON �삎�떇�쓽 臾몄옄�뿴�뿉�꽌 �뀓�뒪�듃留� 異붿텧�빐�꽌 臾몄옄�뿴 諛섑솚 : inferText 媛� 異붿텧
 	public String jsonToString(String jsonStr) {
 		String resultText = "";
+		List<String> list = null;
+		list = new ArrayList<String>(); 
+		int count =0;
+
 		
-		// 異붿텧�븷 �삤釉뚯젥�듃 : images , fields, inferText�쓽 媛�
 		JSONObject jsonObj = new JSONObject(jsonStr);
 		
-		//jsonObj�뿉�꽌 images  異붿텧 : 由ъ뒪�듃 
 		JSONArray imgArray = (JSONArray)jsonObj.get("images");
-		//由ъ뒪�듃�쓽 �슂�냼媛� 1媛쒕컰�뿉 �뾾�쑝誘�濡� index瑜� 0�쑝濡� 吏��젙
+
 		JSONObject imgObj =  (JSONObject)imgArray.get(0);
 		
-		// fields 異붿텧 : 由ъ뒪�듃
+
 		JSONArray fieldsArray = (JSONArray) imgObj.get("fields");
 		
 		if(fieldsArray != null) {
-			for(int i=0; i<fieldsArray.length(); i++) {  //size()媛� �븘�땲怨� length() (org.json.JSONArray�궗�슜)
+			String allStr = "";
+			for(int i=0; i<fieldsArray.length(); i++) {  
 				JSONObject tempObj = (JSONObject)fieldsArray.get(i);
-				String str = (String)tempObj.get("inferText");
-				resultText += str + " ";
+				String str = (String)tempObj.get("inferText");	
+				allStr += str.trim();				
+			}
+			String[] array = allStr.split(",");
+			count++;
+			for(int j=0 ; j<array.length ; j++) {
+				list.add(resultText += array[j] + " ");
 			}
 		}else {
-			System.out.println("�뾾�쓬");
+			System.out.println("");
 		}		
-		return resultText;
+		return resultText; 
 	}
 	
 }
