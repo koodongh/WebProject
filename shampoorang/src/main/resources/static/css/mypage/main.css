@@ -20,7 +20,6 @@
 
 .mypage-list {
     flex-direction: column;
-    /* width: 40vw; */
     justify-content: center;
     margin: 0 auto;
 }
