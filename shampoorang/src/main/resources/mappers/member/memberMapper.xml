@@ -8,7 +8,6 @@
 			<result property="member_id" column="member_id" />
 	        <result property="member_pw" column="member_pw" />
 	        <result property="member_nickname" column="member_nickname" />
-	        <result property="member_result_list" column="member_result_list" />
 		</resultMap>
 		
   		<!-- 로그인 확인 -->
