@@ -31,7 +31,7 @@
 }
 
 .mypage-list .logout-btn {
-    background-color: rgb(243, 235, 164);
+    background-color: rgb(173, 172, 162);
 }
 
 .mypage-list .bad-btn {
@@ -39,5 +39,5 @@
 }
 
 .mypage-list .search-btn {
-    background-color: rgb(173, 172, 162);
+    background-color: rgb(243, 235, 164);
 }
