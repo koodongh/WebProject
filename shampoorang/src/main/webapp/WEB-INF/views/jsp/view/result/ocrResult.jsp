@@ -28,6 +28,7 @@
 			</div>
 			<div class="ocr">
 				<h5> OCR : 이미지 텍스트 추출 결과</h5>
+				<!-- 액션 원래: "/result/ocr" -->
 				<form action="/result/ocr" method="POST">
 					<div class="d-flex justify-content-center">
 						<textarea id="ocr_text" name="ocr_text" rows="10" cols="40" ></textarea>					

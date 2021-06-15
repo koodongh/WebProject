@@ -21,6 +21,10 @@
 			
 		</insert>
 		
+		<select id="analysis" resultMap="analysisResult" parameterType="String">	  	  	
+			SELECT * FROM OCR_result WHERE member_id=#{sid}					
+		</select>
+		
 	  	<select id="analysisList" resultMap="analysisResult">	  	  	
 			SELECT * FROM OCR_result ORDER BY result_id					
 		</select>
