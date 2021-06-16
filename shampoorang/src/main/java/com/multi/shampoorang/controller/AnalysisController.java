@@ -36,8 +36,9 @@ public class AnalysisController {
 
 	@RequestMapping("/result/ocr")
 	public String Ocr(AnalysisVO ocr, HttpSession session) {
-
-		((AnalysisService) analysisService).Ocr(ocr);
+		String sid = (String) session.getAttribute("sid");
+		ocr.setMember_id(sid);
+		analysisService.Ocr(ocr);
 		return "redirect:/ocr_join_list";
 	}
 
