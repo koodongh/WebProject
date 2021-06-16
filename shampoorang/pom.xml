@@ -133,13 +133,13 @@
         		<scope>runtime</scope> 
         	</dependency>
 		
-		<dependency>
-			<groupId>ojdbc</groupId>
-			<artifactId>ojdbc</artifactId>
-			<version>14</version>
-			<scope>system</scope>
-			<systemPath>C:\Users\82106\Downloads\ojdbc14.jar</systemPath>
-		</dependency>
+			<dependency>
+  				<groupId>org.jsoup</groupId>
+			 	 <artifactId>jsoup</artifactId>
+			 	 <version>1.13.1</version>
+			</dependency>
+			
+	
 	</dependencies>
 
 	<build>
