@@ -50,6 +50,5 @@ public class OcrJoinVO {
 	public void setEwg_encode(int ewg_encode) {
 		this.ewg_encode = ewg_encode;
 	}
-
 	
 }

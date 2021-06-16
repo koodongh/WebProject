@@ -72,11 +72,11 @@ public class OCRService {
 			}
 			br.close();
 
-			System.out.println(response);  		
-			System.out.println(response.toString()); 
+			//System.out.println(response);  		
+			//System.out.println(response.toString()); 
 			
 			result = jsonToString(response.toString()); 
-			System.out.println(result);
+			//System.out.println(result);
 		} catch (Exception e) {
 			System.out.println(e);
 		}

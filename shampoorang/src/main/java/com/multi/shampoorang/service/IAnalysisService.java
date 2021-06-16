@@ -12,5 +12,4 @@ public interface IAnalysisService {
 	ArrayList<AnalysisVO> memberAnalysisList(String member_id);
 	void Ocr(AnalysisVO ocr);
 	ArrayList<OcrJoinVO> ocrJoinList(String sid);
-
 }

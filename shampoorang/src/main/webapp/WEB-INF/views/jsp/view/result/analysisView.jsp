@@ -27,13 +27,13 @@
 <%-- 					<h2>${ sid }</h2> --%>
 					<table border="1" width=60%  table style="margin-left: auto; margin-right: auto;">
 					<!--result_id랑 member_id 두개는 안떠도 괜찮다 이후수정  -->
-			 		<tr><td>ingd_name</td>
-			 	     	<td>ewg</td><td>hazzard</td><td>description</td>
+			 		<tr><td>성분</td>
+			 	     	<td>EWG등급</td><td>성분특징</td>
 			 	     	</tr>
 			 	     	
 					<c:forEach items="${ ocrJoinList }" var="ocrJoin">
 						<td>${ocrJoin.ingd_name}</td>
-				        <td>${ocrJoin.ewg}</td><td>${ocrJoin.hazzard}</td><td>${ocrJoin.description}</td></tr>
+				        <td>${ocrJoin.ewg}</td><td>${ocrJoin.description}</td></tr>
 				          
 					</c:forEach> 
 					</table>

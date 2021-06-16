@@ -13,6 +13,4 @@ public interface IAnalysisDAO {
 	void Ocr(AnalysisVO ocr);
 	AnalysisVO analysis(String sid);
 	ArrayList<OcrJoinVO> ocrJoinList();
-	/*
-	 * public ArrayList<JoinVO> joinList();
-	 */}
+	}

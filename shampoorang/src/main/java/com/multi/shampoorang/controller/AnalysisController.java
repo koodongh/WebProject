@@ -37,31 +37,36 @@ public class AnalysisController {
 	@RequestMapping("/result/ocr")
 	public String Ocr(AnalysisVO ocr, HttpSession session) {
 
-		((AnalysisService) analysisService).Ocr(ocr);
+		String sid = (String) session.getAttribute("sid");
+		ocr.setMember_id(sid);
+		
+		analysisService.Ocr(ocr);
+
 		return "redirect:/ocr_join_list";
 	}
 
 	@RequestMapping("/ocr_join_list")
 	public String ocr_join_list(Model model, HttpSession session) {
-
-		// sid 가져오기
-		String sid = (String) session.getAttribute("sid");
-		System.out.println("sid : " + sid);
-
-		ArrayList<OcrJoinVO> ocrJoinList = analysisService.ocrJoinList(sid);
-
 		
-		  for(int i=0; i < ocrJoinList.size(); i++) {
-		  System.out.print(ocrJoinList.get(i).getResult_id());
-		  System.out.print(ocrJoinList.get(i).getMember_id());
-		  System.out.print(ocrJoinList.get(i).getIngd_name());
-		  System.out.print(ocrJoinList.get(i).getEwg());
-		  System.out.print(ocrJoinList.get(i).getHazzard());
-		  System.out.print(ocrJoinList.get(i).getDescription());
-		  System.out.print(ocrJoinList.get(i).getEwg_encode()); System.out.println(); }
-		 
+		  String sid = (String) session.getAttribute("sid");
+		  
+			/*
+			 * ArrayList<OcrJoinVO> vo = analysisService.ocrJoinList(sid);
+			 * 
+			 * String rRe = vo.get(1).getResult_id(); System.out.println(rRe);
+			 * 
+			 * session.setAttribute("rRe", rRe);
+			 * 
+			 * String key = (String) session.getAttribute("rRe");
+			 */
 
-		model.addAttribute("ocrJoinList", ocrJoinList);
+		  ArrayList<OcrJoinVO> ocrJoinList = analysisService.ocrJoinList(sid);
+		  		  		 	
+		  
+		  model.addAttribute("ocrJoinList", ocrJoinList);
+		
+		  
+		  
 		return "/result/analysisView";
 	}
 
@@ -74,3 +79,16 @@ public class AnalysisController {
 		return "/result/resultDetailView";
 	}
 }
+
+/*
+ * 
+ * for(int i=0; i < ocrJoinList.size(); i++) {
+ * System.out.print(ocrJoinList.get(i).getResult_id());
+ * System.out.print(ocrJoinList.get(i).getMember_id());
+ * System.out.print(ocrJoinList.get(i).getIngd_name());
+ * System.out.print(ocrJoinList.get(i).getEwg());
+ * System.out.print(ocrJoinList.get(i).getHazzard());
+ * System.out.print(ocrJoinList.get(i).getDescription());
+ * System.out.print(ocrJoinList.get(i).getEwg_encode()); System.out.println(); }
+ * 
+ */

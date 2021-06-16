@@ -22,7 +22,7 @@
 					<p class="text-center">샴푸 뒷면의 성분표를 찍어주세요!</p>
 					<input type="file" id="uploadFile" name="uploadFile">
 					<div class="result">
-						<input class="btn btn-lg mt-3" type="submit" value="텍스트 확인">
+						<button class="btn btn-lg mt-3" type="submit" id="submit">텍스트 확인</button>
 					</div>
 				</form>
 			</div>
@@ -36,7 +36,7 @@
 					<c:choose>
 						<c:when test="${ sid ne null }">
 							<div class="d-flex justify-content-center mt-3">
-								<button type="submit" class="btn btn-lg btn-light" id="submit">그냥 결과만 볼게요:)</button>					
+								<input type="submit" class="btn btn-lg btn-light" value="그냥 결과만 볼게요">					
 							</div>
 							<div class="result-btn d-flex justify-content-center mt-3">
 								<button type="submit" class="btn btn-lg" id="submit">결과 저장도 할래요!</button>					

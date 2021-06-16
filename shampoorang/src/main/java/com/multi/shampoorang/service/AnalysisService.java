@@ -28,10 +28,20 @@ public class AnalysisService implements IAnalysisService {
 		return dao.analysisList();
 	}
 
-	@Override
-	public void Ocr(AnalysisVO ocr) {
-		dao.Ocr(ocr);
-	}
+	/*
+	 * @Override public void Ocr(AnalysisVO ocr) { String sid = "test1"; // 이후 세션에서
+	 * 받아오는걸로 할거임 AnalysisVO analVO = dao.analysis(sid);
+	 * 
+	 * ArrayList<AnalysisVO> ocrVO = new ArrayList<AnalysisVO>(); // String
+	 * member_id = analVO.getMember_id(); dao.Ocr(analVO); }
+	 */
+
+
+	  
+	  @Override public void Ocr(AnalysisVO ocr) {
+		  dao.Ocr(ocr); 
+		  }
+	 
 
 	@Override
 	public ArrayList<AnalysisVO> detailResult(String result_id) {
@@ -45,6 +55,7 @@ public class AnalysisService implements IAnalysisService {
 
 	@Override
 	public ArrayList<OcrJoinVO> ocrJoinList(String sid) {
+
 		AnalysisVO analVO = dao.analysis(sid);
 		String ocr_text = analVO.getOcr_text();
 
@@ -55,9 +66,10 @@ public class AnalysisService implements IAnalysisService {
 		for (int i = 0; i < ocr_text_arr.length; i++) {
 			/* System.out.println(ocr_text_arr[i]); */
 			OcrJoinVO ocrJoinVO = new OcrJoinVO();
+			//System.out.println(ocrJoinVO.getResult_id());
 			ProductVO prdVO = prdDao.productDetailView(ocr_text_arr[i].trim());
-
-				if(prdVO != null) {
+			
+			if (prdVO != null) {
 				ocrJoinVO.setResult_id(analVO.getResult_id());
 				ocrJoinVO.setMember_id(analVO.getMember_id());
 				ocrJoinVO.setIngd_name(prdVO.getingd_name());
@@ -65,27 +77,15 @@ public class AnalysisService implements IAnalysisService {
 				ocrJoinVO.setHazzard(prdVO.gethazzard());
 				ocrJoinVO.setDescription(prdVO.getdescription());
 				ocrJoinVO.setEwg_encode(prdVO.getewg_encode());
-				}
-				
-				else {
-				
-				  ocrJoinVO.setResult_id("없음"); ocrJoinVO.setMember_id("없음");
-				  ocrJoinVO.setIngd_name("없음"); ocrJoinVO.setEwg("없음");
-				  ocrJoinVO.setHazzard(0); ocrJoinVO.setDescription("없음");
-				  ocrJoinVO.setEwg_encode(0);
-				 
-				}
-
+			}
+			else {
 				/*
-				 * System.out.println(ocrJoinVO.getResult_id());
-				 * System.out.println(ocrJoinVO.getMember_id());
-				 * System.out.println(ocrJoinVO.getIngd_name());
-				 * System.out.println(ocrJoinVO.getEwg());
-				 * System.out.println(ocrJoinVO.getHazzard());
-				 * System.out.println(ocrJoinVO.getDescription());
-				 * System.out.println(ocrJoinVO.getEwg_encode());
+				 * ocrJoinVO.setResult_id("없음"); ocrJoinVO.setMember_id("없음");
+				 * ocrJoinVO.setIngd_name("없음"); ocrJoinVO.setEwg("없음");
+				 * ocrJoinVO.setHazzard(0); ocrJoinVO.setDescription("없음");
+				 * ocrJoinVO.setEwg_encode(0);
 				 */
-			 
+			}
 
 			ocrJoinList.add(ocrJoinVO);
 		}
@@ -93,4 +93,14 @@ public class AnalysisService implements IAnalysisService {
 		return ocrJoinList;
 	}
 
+
 }
+/*
+ * System.out.println(ocrJoinVO.getResult_id());
+ * System.out.println(ocrJoinVO.getMember_id());
+ * System.out.println(ocrJoinVO.getIngd_name());
+ * System.out.println(ocrJoinVO.getEwg());
+ * System.out.println(ocrJoinVO.getHazzard());
+ * System.out.println(ocrJoinVO.getDescription());
+ * System.out.println(ocrJoinVO.getEwg_encode());
+ */
