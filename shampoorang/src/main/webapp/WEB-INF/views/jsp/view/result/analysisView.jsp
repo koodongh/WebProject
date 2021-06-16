@@ -5,7 +5,8 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		
+		<link href="/css/mypage/viewIngd.css" rel="stylesheet">
+		<script type="text/javascript" src="/js/dislikeIngd.js"></script>
 		<link rel="stylesheet" href="/css/result/analysisView.css">
 		<title>분석 결과</title>
 	</head>
@@ -23,12 +24,20 @@
 				
 				<div class="all-ingredient">
 					<h3 class="text-center">전 성분</h3>
-				  		<c:forEach items="${analysisList}" var="ana">   
-							<tr>
-					     		 <td>${ana.ocr_text}</td>	
-					   		</tr>
-					   		<br>		
-						</c:forEach>
+<%-- 					<h2>${ sid }</h2> --%>
+					<table border="1" width=60%  table style="margin-left: auto; margin-right: auto;">
+					<!--result_id랑 member_id 두개는 안떠도 괜찮다 이후수정  -->
+			 		<tr><td>ingd_name</td>
+			 	     	<td>ewg</td><td>hazzard</td><td>description</td>
+			 	     	</tr>
+			 	     	
+					<c:forEach items="${ ocrJoinList }" var="ocrJoin">
+						<td>${ocrJoin.ingd_name}</td>
+				        <td>${ocrJoin.ewg}</td><td>${ocrJoin.hazzard}</td><td>${ocrJoin.description}</td></tr>
+				          
+					</c:forEach> 
+					</table>
+					
 				</div>
 				
 				<div class="bad-ingredient">

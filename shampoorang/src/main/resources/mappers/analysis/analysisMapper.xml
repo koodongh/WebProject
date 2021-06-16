@@ -39,5 +39,10 @@
 			WHERE member_id = #{member_id}
 			ORDER BY joinDate
 		</select>
+		
+		<select id="ocrJoinList" resultType="com.multi.shampoorang.model.OcrJoinVO">	  	  	
+			SELECT * FROM OCR_result, ingd_list WHERE OCR_result.ocr_text = ingd_list.ingd_name
+		</select>		
+		
 	</mapper>
 		
