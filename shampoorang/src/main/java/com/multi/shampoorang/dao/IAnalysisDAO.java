@@ -3,7 +3,6 @@ package com.multi.shampoorang.dao;
 import java.util.ArrayList;
 
 import com.multi.shampoorang.model.AnalysisVO;
-import com.multi.shampoorang.model.JoinVO;
 import com.multi.shampoorang.model.OcrJoinVO;
 
 public interface IAnalysisDAO {
