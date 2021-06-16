@@ -65,16 +65,16 @@ public class AnalysisService implements IAnalysisService {
 				ocrJoinVO.setHazzard(prdVO.gethazzard());
 				ocrJoinVO.setDescription(prdVO.getdescription());
 				ocrJoinVO.setEwg_encode(prdVO.getewg_encode());
-				}
 				
-				else {
-				
-				  ocrJoinVO.setResult_id("없음"); ocrJoinVO.setMember_id("없음");
-				  ocrJoinVO.setIngd_name("없음"); ocrJoinVO.setEwg("없음");
-				  ocrJoinVO.setHazzard(0); ocrJoinVO.setDescription("없음");
-				  ocrJoinVO.setEwg_encode(0);
-				 
+				ocrJoinList.add(ocrJoinVO);
 				}
+					
+		}
+
+		return ocrJoinList;
+	}
+
+}
 
 				/*
 				 * System.out.println(ocrJoinVO.getResult_id());
@@ -87,10 +87,4 @@ public class AnalysisService implements IAnalysisService {
 				 */
 			 
 
-			ocrJoinList.add(ocrJoinVO);
-		}
 
-		return ocrJoinList;
-	}
-
-}
