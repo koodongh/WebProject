@@ -1,7 +1,18 @@
 .container {
-	margin-top: 5rem;
-	margin-bottom: 15rem;
+	margin-bottom: 6rem;
 }
+
+.notice-text {
+	text-align: center;
+	padding-top: 3rem;
+	padding-bottom: 1rem;
+}
+
+.notice-text p {
+	font-size: 14px;
+	color: grey;
+}
+
 .card-align-middle {
 	text-align:center;
 }
@@ -18,17 +29,6 @@
 	height: 200px;
 
 }
-
-
-.all-ingredient h3 {
-	font-size: 30px;
-	margin-top: 20px;
-}
-
-.all-ingredient h4 {
-	font-size: 20px;
-}
-
 
 .bad-ingredient h3 {
 	font-size: 30px;

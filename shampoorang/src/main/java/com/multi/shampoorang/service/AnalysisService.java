@@ -53,7 +53,7 @@ public class AnalysisService implements IAnalysisService {
 		ArrayList<OcrJoinVO> ocrJoinList = new ArrayList<OcrJoinVO>();
 
 		for (int i = 0; i < ocr_text_arr.length; i++) {
-			/* System.out.println(ocr_text_arr[i]); */
+			System.out.println(ocr_text_arr[i]);
 			OcrJoinVO ocrJoinVO = new OcrJoinVO();
 			ProductVO prdVO = prdDao.productDetailView(ocr_text_arr[i].trim());
 

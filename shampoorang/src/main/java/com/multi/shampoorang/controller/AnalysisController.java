@@ -12,8 +12,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.multi.shampoorang.model.AnalysisVO;
+import com.multi.shampoorang.model.DislikeVO;
 import com.multi.shampoorang.model.OcrJoinVO;
 import com.multi.shampoorang.service.AnalysisService;
+import com.multi.shampoorang.service.DislikeService;
 import com.multi.shampoorang.service.ProductService;
 
 @Controller
@@ -24,6 +26,9 @@ public class AnalysisController {
 
 	@Autowired
 	ProductService productService;
+	
+	@Autowired
+	DislikeService dislikeService;
 
 	@RequestMapping("/result/analysisView")
 	public String viewAnalysisList(Model model) {
@@ -48,6 +53,9 @@ public class AnalysisController {
 		// sid 가져오기
 		String sid = (String) session.getAttribute("sid");
 		System.out.println("sid : " + sid);
+		
+		ArrayList<DislikeVO> dislikeList = dislikeService.dislikeList(sid);
+		model.addAttribute("dislikeList", dislikeList);
 
 		ArrayList<OcrJoinVO> ocrJoinList = analysisService.ocrJoinList(sid);
 
@@ -71,7 +79,7 @@ public class AnalysisController {
 
 		ArrayList<AnalysisVO> detailResult = analysisService.detailResult(result_id);
 		model.addAttribute("detailResult", detailResult);
-
+		
 		return "/result/resultDetailView";
 	}
 }
