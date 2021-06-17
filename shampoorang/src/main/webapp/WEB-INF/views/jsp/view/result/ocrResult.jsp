@@ -33,21 +33,9 @@
 					<div class="d-flex justify-content-center">
 						<textarea id="ocr_text" name="ocr_text" rows="9" cols="40" ></textarea>					
 					</div>
-					<c:choose>
-						<c:when test="${ sid ne null }">
-							<div class="d-flex justify-content-center mt-3">
-								<button type="submit" class="btn btn-lg btn-light" id="submit">그냥 결과만 볼게요:)</button>					
-							</div>
-							<div class="result-btn d-flex justify-content-center mt-3">
-								<button type="submit" class="btn btn-lg" id="submit">결과 저장도 할래요!</button>					
-							</div>						
-						</c:when>
-						<c:otherwise>
-							<div class="result-btn d-flex justify-content-center mt-3">
-								<button type="submit" class="btn btn-lg" id="submit">결과 분석</button>					
-							</div>						
-						</c:otherwise>
-					</c:choose>
+					<div class="result-btn d-flex justify-content-center mt-3">
+						<button type="submit" class="btn btn-lg" id="submit">결과 분석</button>					
+					</div>
 			    </form>
 			</div>
 		</div>
