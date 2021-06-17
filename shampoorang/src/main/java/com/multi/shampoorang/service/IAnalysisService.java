@@ -8,9 +8,9 @@ import com.multi.shampoorang.model.OcrJoinVO;
 public interface IAnalysisService {
 
 	ArrayList<AnalysisVO> analysisList();
-	ArrayList<AnalysisVO> detailResult(String result_id);
 	ArrayList<AnalysisVO> memberAnalysisList(String member_id);
 	void Ocr(AnalysisVO ocr);
 	ArrayList<OcrJoinVO> ocrJoinList(String sid);
-
+	ArrayList<OcrJoinVO> resultJoinList(String result_id);
+	
 }

@@ -13,46 +13,73 @@
 	<body>
 		<div class="container">
 			<div class="card-align-middle">
-				<div class="card-title">
-					<h2 class="card-title text-center">분석 결과</h2>
+				<div class="notice-text">
+					<h1>분석 결과</h1>
+					<hr style="border: solid 6px rgb(245, 147, 147); border-radius: 10px;">
 				</div>
 				
 				<div class="shampoo-image">
-					<a href="#"> <img src="/image/shampoo.jpg">
+					<a href="#"> 
+						<img src="/image/shampoo.jpg">
 					</a>
 				</div>
-				
-				<div class="all-ingredient">
-					<h3 class="text-center">전 성분</h3>
-				  	 <c:forEach items="${detailResult}" var="ana">   
-						<tr>
-				     		 <td>${ana.ocr_text}</td>
-				   		</tr>
-				   		<br>		
+
+				<div class="dislike-ingd mt-3 mb-5">
+					<h4 class="text-center">피해야 하는 성분</h4>
+					<c:forEach items="${ resultJoinList }" var="ocr">				
+						<c:set var="break" value="false" />
+						<c:forEach items="${ dislikeList }" var="dislike">
+							<c:if test="${break ne true}">
+								<c:choose>
+									<c:when test="${ dislike.ingd_name eq ocr.ingd_name }">
+										<c:set var="checkedValue" value="checked" />	
+										<c:set var="break" value="true" />			
+									</c:when>
+									<c:otherwise>
+										<c:set var="checkedValue" value="" />								
+									</c:otherwise>							
+								</c:choose>							
+							</c:if>					
+						</c:forEach> 	
+						<c:if test="${checkedValue eq 'checked'}">
+							<div class="form-check mt-2 mb-2">
+								<li>${ ocr.ingd_name }</li>
+							</div>
+						</c:if>	
 					</c:forEach>
 				</div>
 				
-				<div class="bad-ingredient">
-					<h3 class="text-center">나쁜 성분</h3>
-					<h4 class="text-center">가나다라 마바사아</h4>
-					<h4 class="text-center">가나다라 마바사아</h4>
-				</div>
-	
-				<div class="card-body">
-					<form>
-						<button id="btn-bad" onclick="location.href = 'badResult'"
-							class="btn btn-lg btn-primary btn-block" type="button">나쁜
-							성분 자세히 보기</button>
-						<div class="good-ingredient">
-							<h3 class="text-center">좋은 성분</h3>
-							<h4 class="text-center">가나다라 마바사아</h4>
-							<h4 class="text-center">가나다라 마바사아</h4>
-							<br>
-						</div>
-						<button id="btn-good" onclick="location.href = 'goodResult'"
-							class="btn btn-lg btn-primary btn-block" type="button">좋은
-							성분 자세히 보기</button>
-					</form>
+				<div class="all-ingredient">
+					<h4 class="text-center">전 성분</h4>
+					<table class="table">
+					  <thead>
+					    <tr>
+					      <th scope="col">성분명</th>
+					      <th scope="col">EWG</th>
+					      <th scope="col">유해성</th>
+					      <th scope="col">증상</th>
+					    </tr>
+					  </thead>
+					  <tbody class="mb-4">
+						<c:forEach items="${ resultJoinList }" var="ocrJoin">
+							<tr>
+						      <td>${ocrJoin.ingd_name}</td>
+						      <td>${ocrJoin.ewg}</td>
+						      <c:choose>
+						      	<c:when test="${ocrJoin.hazzard <= '2'}">
+						      		<td><span class="badge bg-light text-dark">&nbsp;&nbsp;&nbsp;${ocrJoin.hazzard}&nbsp;&nbsp;&nbsp;</span></td>
+						      	</c:when>
+						      	<c:when test="${3 < ocrJoin.hazzard <= '6'}">
+						      		<td><span class="badge bg-warning text-dark">&nbsp;&nbsp;&nbsp;${ocrJoin.hazzard}&nbsp;&nbsp;&nbsp;</span></td>
+						      	</c:when>
+						      	<c:otherwise>
+						      		<td><span class="badge bg-danger">&nbsp;&nbsp;&nbsp;${ocrJoin.hazzard}&nbsp;&nbsp;&nbsp;</span></td>
+						      	</c:otherwise>
+						      </c:choose>
+						      <td>${ocrJoin.description}</td>       
+						</c:forEach>
+					  </tbody>
+					</table>
 				</div>
 			</div>
 		</div>
