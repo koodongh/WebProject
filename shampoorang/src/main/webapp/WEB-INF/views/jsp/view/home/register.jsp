@@ -19,7 +19,7 @@
 					<label for="inputEmail" class="sr-only" >ID</label>
        		 		<input type="text" id="uid" name="member_id" class="form-control" placeholder="ID" required autofocus>
        		 		<div class="button-location">
-        			<button type="button" class="btn btn-sm" id="idCheck">아이디확인</button><br/> 
+<!--         			<button type="button" class="btn btn-sm" id="idCheck">아이디확인</button><br/>  -->
         			</div>  
         			<label for="inputPassword" class="sr-only" >Password</label>
        		 		<input type="password" id="upw" name="member_pw" class="form-control" placeholder="Password" required><br>

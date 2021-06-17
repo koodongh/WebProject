@@ -9,8 +9,8 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/ai/**")
-                .addResourceLocations("file:///c:/ai/");
+    	registry.addResourceHandler("/fileupload/**")
+    	.addResourceLocations("file:/usr/local/tomcat9/webapps/ROOT/WEB-INF/classes/static/fileupload/"); 
     }
 }
 

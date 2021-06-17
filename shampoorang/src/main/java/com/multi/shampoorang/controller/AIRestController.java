@@ -22,8 +22,8 @@ public class AIRestController {
 		
 		try {
 			//1. 파일 저장 경로 설정 : 실제 서비스 되는 위치 (프로젝트 외부에 저장)
-			  String uploadPath =  "c:/ai/";
-			  
+			  String uploadPath = "/usr/local/tomcat9/webapps/ROOT/WEB-INF/classes/static/fileupload/";
+			
 			  //2.원본 파일 이름
 			  String originalFileName = file.getOriginalFilename();  
 			  

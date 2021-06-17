@@ -6,7 +6,9 @@
 	$('#ocrForm').on('submit', function(event){
 		event.preventDefault(); //submit 후에  reload 안 되게
 		var formData = new FormData($('#ocrForm')[0]);
-		
+	setTimeout( function() {		   
+	 $('#ocrImg').prop("src", 'http://49.50.165.28:8080/fileupload/'+ src);
+		} , 1000) ;
 		$.ajax({
 			type:"post",
 			enctype:"multipart/form-data",
