@@ -22,16 +22,19 @@
 		</insert>
 		
 		<select id="analysis" resultMap="analysisResult" parameterType="String">	  	  	
-			SELECT * FROM OCR_result WHERE member_id=#{sid}					
+			SELECT * FROM OCR_result
+			WHERE result_id IN  (SELECT MAX(result_id) FROM OCR_result WHERE member_id=#{sid})	
+						
 		</select>
+		
+		<select id="resultAnalysis" resultMap="analysisResult" parameterType="String">	  	  	
+			SELECT * FROM OCR_result
+			WHERE result_id=#{result_id}
+						
+		</select>		
 		
 	  	<select id="analysisList" resultMap="analysisResult">	  	  	
 			SELECT * FROM OCR_result ORDER BY result_id					
-		</select>
-		
-		<select id="detailResult" resultMap="analysisResult" parameterType="String">	  	  	
-			SELECT * FROM OCR_result
-			WHERE result_id=#{result_id}
 		</select>
 		
 		<select id="memberAnalysisList" resultMap="analysisResult">

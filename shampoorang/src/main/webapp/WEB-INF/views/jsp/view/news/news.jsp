@@ -4,11 +4,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="/css/mypage/viewIngd.css" rel="stylesheet">
+<link href="/css/news/news.css" rel="stylesheet">
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
 </head>
 <body>
-	<div class="container2">
+	<div class="container">
 		<div class="notice-text">
 			<h1>샴푸 관련 기사 보기</h1>
 			<hr style="border: solid 6px rgb(147 191 245); border-radius: 10px;">			

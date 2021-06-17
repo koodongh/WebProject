@@ -34,11 +34,6 @@ public class AnalysisService implements IAnalysisService {
 	}
 
 	@Override
-	public ArrayList<AnalysisVO> detailResult(String result_id) {
-		return dao.detailResult(result_id);
-	}
-
-	@Override
 	public ArrayList<AnalysisVO> memberAnalysisList(String member_id) {
 		return dao.memberAnalysisList(member_id);
 	}
@@ -73,18 +68,39 @@ public class AnalysisService implements IAnalysisService {
 
 		return ocrJoinList;
 	}
+	
+	@Override
+	public 	ArrayList<OcrJoinVO> resultJoinList(String member_id) {
+		AnalysisVO analVO = dao.resultAnalysis(member_id);
+		String ocr_text = analVO.getOcr_text();
+
+		String[] ocr_text_arr = ocr_text.split(" ");
+
+		ArrayList<OcrJoinVO> resultJoinList = new ArrayList<OcrJoinVO>();
+
+		for (int i = 0; i < ocr_text_arr.length; i++) {
+			System.out.println(ocr_text_arr[i]);
+			OcrJoinVO ocrJoinVO = new OcrJoinVO();
+			ProductVO prdVO = prdDao.productDetailView(ocr_text_arr[i].trim());
+
+				if(prdVO != null) {
+				ocrJoinVO.setResult_id(analVO.getResult_id());
+				ocrJoinVO.setMember_id(analVO.getMember_id());
+				ocrJoinVO.setIngd_name(prdVO.getingd_name());
+				ocrJoinVO.setEwg(prdVO.getewg());
+				ocrJoinVO.setHazzard(prdVO.gethazzard());
+				ocrJoinVO.setDescription(prdVO.getdescription());
+				ocrJoinVO.setEwg_encode(prdVO.getewg_encode());
+				
+				resultJoinList.add(ocrJoinVO);
+				}
+					
+		}
+
+		return resultJoinList;
+	}
 
 }
-
-				/*
-				 * System.out.println(ocrJoinVO.getResult_id());
-				 * System.out.println(ocrJoinVO.getMember_id());
-				 * System.out.println(ocrJoinVO.getIngd_name());
-				 * System.out.println(ocrJoinVO.getEwg());
-				 * System.out.println(ocrJoinVO.getHazzard());
-				 * System.out.println(ocrJoinVO.getDescription());
-				 * System.out.println(ocrJoinVO.getEwg_encode());
-				 */
 			 
 
 

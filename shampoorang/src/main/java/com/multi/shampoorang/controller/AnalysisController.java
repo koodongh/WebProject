@@ -73,13 +73,31 @@ public class AnalysisController {
 		model.addAttribute("ocrJoinList", ocrJoinList);
 		return "/result/analysisView";
 	}
-
+	
 	@RequestMapping("/mypage/resultList/{member_id}/{result_id}")
-	public String mypageDetailResult(@PathVariable String member_id, @PathVariable String result_id, Model model) {
+	public String resultJoinList(@PathVariable String result_id, Model model, HttpSession session) {
 
-		ArrayList<AnalysisVO> detailResult = analysisService.detailResult(result_id);
-		model.addAttribute("detailResult", detailResult);
+		// sid 가져오기
+		String sid = (String) session.getAttribute("sid");
+		System.out.println("sid : " + sid);
 		
+		ArrayList<DislikeVO> dislikeList = dislikeService.dislikeList(sid);
+		model.addAttribute("dislikeList", dislikeList);
+
+		ArrayList<OcrJoinVO> resultJoinList = analysisService.resultJoinList(result_id);
+
+		
+		  for(int i=0; i < resultJoinList.size(); i++) {
+		  System.out.print(resultJoinList.get(i).getResult_id());
+		  System.out.print(resultJoinList.get(i).getMember_id());
+		  System.out.print(resultJoinList.get(i).getIngd_name());
+		  System.out.print(resultJoinList.get(i).getEwg());
+		  System.out.print(resultJoinList.get(i).getHazzard());
+		  System.out.print(resultJoinList.get(i).getDescription());
+		  System.out.print(resultJoinList.get(i).getEwg_encode()); System.out.println(); }
+		 
+
+		model.addAttribute("resultJoinList", resultJoinList);
 		return "/result/resultDetailView";
 	}
 }
